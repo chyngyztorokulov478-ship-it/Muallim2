@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<link rel="manifest" href="manifest.webmanifest"/>
+<meta name="theme-color" content="#007FFF"/>
+<link rel="apple-touch-icon" href="icon-192.png"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta property="og:title" content="Куран Алип — Устаз Чыңгыз Торокулов"/>
+<meta property="og:description" content="Куран окууну нөлдөн баштап үйрөнүү · Муалим Сани негизинде · интерактивдүү сабактар, үй окуусу, тесттер"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Устаз Чыңгыз Торокулов · Куран окуу платформасы</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Amiri:wght@400;700&family=Lateef&family=Reem+Kufi&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4ECD8;--paper2:#FDFBF7;--ink:#1d1a14;--soft:#8d8574;--em:#0f9d63;--em-d:#0b7a4c;--red:#c9432e;--line:#ddd5c2;--card:#fdfbf5;}
+[data-theme="dark"]{--paper:#171a17;--paper2:#20241f;--ink:#e8e6df;--soft:#8b9184;--line:#2e332d;--card:#20241f;}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+body{background:var(--paper);color:var(--ink);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;}
+.wrap{max-width:980px;margin:0 auto;padding:0 14px 110px;}
+header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.hrow{max-width:980px;margin:0 auto;padding:7px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.brand b{color:var(--em-d);font-size:1rem;}.brand span{display:block;font-size:0.65rem;color:var(--soft);letter-spacing:0.08em;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+.btn{background:var(--em);color:#fff;padding:8px 14px;border-radius:10px;font-size:0.83rem;font-weight:600;}
+.btn.g{background:color-mix(in srgb,var(--ink) 8%,transparent);color:var(--ink);}
+.btn.r{background:var(--red);color:#fff;}
+.btn.sm{padding:5px 10px;font-size:0.74rem;border-radius:8px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:10px;}
+input,select,textarea{font-family:inherit;font-size:0.9rem;padding:8px 11px;border:1px solid var(--line);border-radius:10px;background:var(--paper2);color:var(--ink);outline:none;width:100%;}
+input:focus{border-color:var(--em);}
+.muted{color:var(--soft);font-size:0.77rem;}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.grow{flex:1;}.mt{margin-top:12px;}.center{text-align:center;}
+.ustaz{display:flex;gap:14px;align-items:center;}
+.ustaz .photo{width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,#0f9d63,#0b7a4c);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.6rem;flex-shrink:0;border:3px solid var(--card);box-shadow:0 2px 8px rgba(0,0,0,0.15);}
+.ustaz b{font-size:1.05rem;}
+.lesson-li{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 4px;border-bottom:1px dashed var(--line);}
+.lesson-li:last-child{border-bottom:none;}
+.phone-outer{display:flex;justify-content:center;margin:12px calc(50% - 50vw) 0;}
+.phone{width:100vw;max-width:760px;aspect-ratio:1/1.6;background:var(--paper2);border:1px solid var(--line);border-radius:14px;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");}
+.gridlayer{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,rgba(15,157,99,0.13) 1px,transparent 1px),linear-gradient(to bottom,rgba(15,157,99,0.13) 1px,transparent 1px);background-size:5% 2.941%;}
+.guide{position:absolute;background:var(--em);z-index:6;pointer-events:none;opacity:0.7;}
+.guide.v{width:1px;top:0;bottom:0;}.guide.h{height:1px;left:0;right:0;}
+.tok{position:absolute;transform:translate(-50%,-50%);direction:rtl;cursor:pointer;white-space:nowrap;line-height:1.5;user-select:none;touch-action:none;padding:2px 6px;border-radius:8px;transition:background 0.15s;}
+.tok.sel{outline:2px dashed var(--em);background:color-mix(in srgb,var(--em) 10%,transparent);}
+.tok.multi{outline:2px solid var(--em-d);background:color-mix(in srgb,var(--em) 14%,transparent);}
+.tok.kar{background:color-mix(in srgb,var(--em) 22%,transparent);outline:2px solid var(--em);}
+.pointer{position:absolute;z-index:7;pointer-events:none;transition:left 0.1s linear,top 0.1s linear;font-size:22px;transform:translate(-4px,-2px);filter:drop-shadow(0 1px 2px rgba(0,0,0,0.4));}
+.tools{position:sticky;bottom:0;z-index:25;background:var(--card);border-top:1px solid var(--line);padding:10px 12px 16px;margin:14px -14px 0;box-shadow:0 -2px 8px rgba(0,0,0,0.05);}
+.sl{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:var(--soft);}
+.sl input[type=range]{width:82px;padding:0;}
+.kbd{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;}
+.kbd button{font-family:'Scheherazade New',serif;font-size:1.4rem;width:40px;height:40px;border:1px solid var(--line);border-radius:8px;background:var(--paper2);}
+.kbd button.hk{font-family:inherit;font-size:0.8rem;width:auto;padding:0 9px;}
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:60;display:flex;align-items:center;justify-content:center;padding:14px;}
+.modal{background:var(--card);border-radius:18px;padding:18px;width:100%;max-width:460px;max-height:88vh;overflow:auto;}
+.ar-in{font-family:'Scheherazade New',serif;font-size:1.7rem;direction:rtl;text-align:center;}
+.themes button{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);}
+.rec-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--red);animation:bl 1s infinite;}
+@keyframes bl{50%{opacity:0.2;}}
+.opt{display:block;width:100%;font-size:2.1rem;padding:8px;margin:7px 0;border:1px solid var(--line);border-radius:12px;background:var(--paper2);direction:rtl;}
+.opt.ok{border-color:var(--em);background:color-mix(in srgb,var(--em) 14%,transparent);}
+.opt.no{border-color:var(--red);background:color-mix(in srgb,var(--red) 12%,transparent);}
+.vidbox{width:100%;aspect-ratio:16/9;border:none;border-radius:12px;background:#000;display:block;}
+table{border-collapse:collapse;width:100%;font-size:0.78rem;}
+th,td{border-bottom:1px dashed var(--line);padding:6px 4px;text-align:center;font-weight:normal;}
+td.nm{text-align:left;font-weight:600;}
+/* видео студия */
+.studio{position:fixed;inset:0;z-index:70;background:#111;display:flex;flex-direction:column;}
+.studio .stage{flex:1;position:relative;overflow:hidden;background:#efe7d4;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");}
+.studio .cam{position:absolute;bottom:14px;right:14px;width:190px;aspect-ratio:3/4;border-radius:14px;object-fit:cover;border:3px solid #fff;box-shadow:0 4px 16px rgba(0,0,0,0.5);z-index:3;background:#000;cursor:move;touch-action:none;}
+.studio .ptr{position:absolute;font-size:30px;z-index:4;pointer-events:none;transform:translate(-6px,-4px);filter:drop-shadow(0 2px 3px rgba(0,0,0,0.5));}
+.studio .bar{background:#1a1a1a;padding:10px 14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;color:#fff;}
+.studio .tok{position:absolute;color:#1a1a1a;}
+.video-upload-box{background-color:#f8f9fa;border:2px dashed #007bff;border-radius:12px;padding:20px;text-align:center;margin:20px 0;}
+.upload-btn{background-color:#007bff;color:white;padding:12px 24px;border-radius:6px;cursor:pointer;font-weight:bold;display:inline-block;transition:0.3s;}
+.upload-btn:hover{background-color:#0056b3;}
+#videoInput{display:none;}
+video.lessonvid{width:100%;max-width:750px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.15);background:#000;display:block;margin:0 auto;}
+/* v47 */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;}
+.tabs button{padding:8px 13px;border-radius:10px;background:color-mix(in srgb,var(--ink) 7%,transparent);font-size:0.8rem;font-weight:600;}
+.tabs button.on{background:var(--em);color:#fff;}
+.actionbar{display:flex;gap:8px;justify-content:center;margin-top:12px;}
+.actionbar .btn{padding:11px 20px;font-size:0.9rem;border-radius:12px;}
+.wa{color:#128C7E;font-weight:700;text-decoration:none;}
+.stcard{border:1px solid var(--line);border-radius:12px;padding:10px;margin-top:8px;background:var(--paper2);}
+body.lessonfix{overflow:hidden;}
+body.lessonfix #app{height:calc(100dvh - 64px);display:flex;flex-direction:column;overflow:hidden;padding-bottom:4px;}
+body.lessonfix .phone-outer{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;margin:6px calc(50% - 50vw) 0;}
+body.lessonfix .phone{width:100vw;max-width:100vw;height:auto;aspect-ratio:1/1.6;max-height:100%;touch-action:none;}
+body.lessonfix .prog{display:grid;grid-template-columns:1fr;gap:0;}
+body.lessonfix .prog .chip:not(.tot){display:none;}
+body.lessonfix .prog .chip.tot{padding:11px 14px;}
+body.lessonfix .actionbar{margin-top:7px;}
+body.lessonfix #modeInfo{margin-top:5px;font-size:0.66rem;}
+body.lessonfix .vidwrap:not(.mini){max-height:28dvh;overflow:hidden;}
+.tools{position:sticky;bottom:0;z-index:21;background:var(--paper);box-shadow:0 -6px 18px rgba(0,0,0,0.10);padding:10px 10px 12px;border-radius:16px 16px 0 0;margin:10px -10px 0;}
+.lcard{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid var(--line);border-radius:14px;margin-top:10px;background:var(--paper2);cursor:pointer;transition:transform .12s;}
+.lcard:active{transform:scale(0.98);}
+.lnum{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem;background:color-mix(in srgb,var(--em) 16%,transparent);color:var(--em-d);flex:none;}
+.lcard.lock-li .lnum{background:color-mix(in srgb,var(--ink) 8%,transparent);color:var(--soft);}
+.aboutCard{margin-top:14px;border:1px solid var(--line);border-radius:18px;padding:22px 18px;background:linear-gradient(150deg,color-mix(in srgb,var(--em) 9%,var(--card)),var(--card) 55%);text-align:center;box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.aboutCard .photo2{width:96px;height:96px;border-radius:50%;margin:0 auto 10px;background-size:cover;background-position:center;border:3px solid var(--em);display:flex;align-items:center;justify-content:center;font-size:2.2rem;background-color:var(--paper2);}
+.aboutCard h4{font-size:1.2rem;letter-spacing:0.3px;}
+.aboutCard .rule{width:52px;height:3px;background:var(--em);margin:10px auto;border-radius:2px;}
+.aboutCard p{white-space:pre-line;color:var(--soft);font-size:0.87rem;line-height:1.65;}
+.phone,.tok{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+.tok{touch-action:manipulation;}
+#toast{position:fixed;bottom:84px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:9px 16px;border-radius:12px;font-size:0.8rem;z-index:98;box-shadow:0 5px 16px rgba(0,0,0,0.3);opacity:0;transition:opacity .25s;pointer-events:none;max-width:88vw;text-align:center;}
+#toast.show{opacity:1;}
+.tok.flash{animation:tokf .85s ease;border-radius:10px;}
+@keyframes tokf{0%{background:color-mix(in srgb,var(--em) 45%,transparent);box-shadow:0 0 0 6px color-mix(in srgb,var(--em) 30%,transparent);}100%{background:transparent;box-shadow:none;}}
+.tok.mist1{background:color-mix(in srgb,#eab308 28%,transparent);border-radius:10px;box-shadow:0 0 0 2px #eab308;}
+.tok.mist2{background:color-mix(in srgb,var(--red) 24%,transparent);border-radius:10px;box-shadow:0 0 0 2px var(--red);}
+.tip{position:absolute;transform:translate(-50%,-120%);background:var(--ink);color:var(--paper);padding:7px 13px;border-radius:11px;font-size:1rem;z-index:34;pointer-events:none;white-space:nowrap;box-shadow:0 5px 16px rgba(0,0,0,0.35);opacity:0;transition:opacity .15s;}
+.tip.show{opacity:1;}
+.lockveil{position:absolute;inset:0;background:color-mix(in srgb,#1d4ed8 30%,rgba(10,20,40,0.35));backdrop-filter:saturate(0.5) brightness(0.8);z-index:6;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:#fff;font-weight:700;font-size:1rem;}
+.tools{padding:8px 8px 9px;}
+.tools .trow{display:flex;gap:5px;overflow-x:auto;align-items:center;padding-bottom:3px;scrollbar-width:thin;}
+.tools .trow+.trow{margin-top:6px;}
+.tools .btn.sm{padding:6px 9px;font-size:0.72rem;flex:none;white-space:nowrap;}
+.tools select{flex:none;padding:6px 8px;font-size:0.74rem;max-width:140px;}
+.tools input[type=number]{flex:none;}
+.prog{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px;}
+.prog .chip{display:flex;justify-content:space-between;align-items:center;font-size:0.68rem;margin:0;}
+.actionbar{gap:7px;}
+.actionbar .btn,.actionbar .btn.g{flex:1;max-width:200px;padding:12px 6px;font-size:0.84rem;background:var(--paper2);color:var(--ink);border:1.5px solid var(--line);box-shadow:none;border-radius:13px;}
+.prog .chip,.prog .chip.warn{background:color-mix(in srgb,var(--ink) 5%,transparent);color:var(--ink);}
+.prog .chip b{color:var(--ink);}
+.fixb{padding:2px 8px;border-radius:8px;background:color-mix(in srgb,var(--em) 20%,transparent);font-size:0.85rem;margin-top:3px;}
+.recwide{width:min(88vw,680px);max-width:100%;}
+.qgrid{display:flex;flex-wrap:wrap;gap:8px;direction:rtl;justify-content:flex-start;margin-top:8px;}
+.qw{display:flex;flex-direction:column;align-items:center;padding:8px 10px 6px;border:1.5px solid var(--line);border-radius:13px;min-width:64px;background:var(--paper2);cursor:pointer;transition:transform .1s;}
+.qw:active{transform:scale(0.94);}
+.qw .qar{font-family:'Scheherazade New';font-size:1.9rem;line-height:1.35;}
+.qw .qtm{font-size:0.6rem;color:var(--soft);direction:ltr;}
+.qw.mk1{background:color-mix(in srgb,#eab308 30%,transparent);border-color:#b8860b;}
+.qw.mk2{background:color-mix(in srgb,var(--red) 25%,transparent);border-color:var(--red);}
+textarea{width:100%;background:var(--paper2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--ink);font-size:0.9rem;font-family:inherit;resize:vertical;}
+.stcard .row{gap:6px;}
+.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:0.7rem;font-weight:700;}
+.badge.on{background:color-mix(in srgb,var(--em) 18%,transparent);color:var(--em-d);}
+.badge.off{background:color-mix(in srgb,var(--red) 15%,transparent);color:var(--red);}
+.vidctl{position:absolute;top:6px;right:6px;z-index:3;display:flex;gap:5px;}
+.vidctl button{background:rgba(0,0,0,0.55);color:#fff;border-radius:8px;padding:4px 9px;font-size:0.78rem;}
+/* v45: видео мини-режим, окуу режими, кулпулар, диктофон */
+.vidwrap{max-width:750px;margin:10px auto 0;position:relative;transition:width 0.25s;}
+.vidwrap .vidin>*{width:100%;aspect-ratio:16/9;border:none;border-radius:12px;background:#000;display:block;}
+.vidwrap.mini{position:sticky;top:50px;z-index:22;width:min(48vw,220px);margin:8px auto 0;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.35);}
+.prog{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:10px;}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:5px 11px;font-size:0.75rem;display:inline-flex;gap:5px;align-items:center;}
+.chip b{color:var(--em-d);}
+.chip.warn b{color:var(--red);}
+.tok.cur{outline:3px solid var(--em);background:color-mix(in srgb,var(--em) 20%,transparent);border-radius:10px;}
+.tok.off{opacity:0.45;}
+.rub{position:absolute;border:1.5px dashed var(--em);background:color-mix(in srgb,var(--em) 10%,transparent);z-index:30;pointer-events:none;border-radius:6px;}
+.voicewarn{position:fixed;left:50%;transform:translateX(-50%);bottom:86px;z-index:40;background:var(--red);color:#fff;padding:10px 18px;border-radius:12px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,0.3);animation:bl 1s infinite;display:none;}
+.lock-li{opacity:0.7;}
+.lock-li .lk{font-size:0.7rem;color:var(--soft);text-align:right;}
+.rec-item{display:flex;gap:8px;background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:10px;flex-wrap:wrap;}
+.rec-item audio{height:34px;max-width:100%;flex:1;min-width:180px;}
+
+
+/* ═══════════ v61-C · КАТУУ 3 ТҮС: КӨК #007FFF · АК · КАРА ═══════════
+   Башка эч бир түс жок. Бир шрифт (Manrope) — UI. Китеп бетиндеги
+   араб тамгалардын шрифттери (.tok inline font-family) ТИЙИЛГЕН ЖОК. */
+
+:root{
+  --blue:#007FFF;
+  --bg:#FFFFFF; --fg:#000000;
+  --line:color-mix(in srgb,var(--fg) 16%,transparent);
+  --soft:color-mix(in srgb,var(--fg) 56%,transparent);
+  --hov:color-mix(in srgb,var(--fg) 5%,transparent);
+  /* эски өзгөрмөлөрдү жаңы палитрага байлайбыз */
+  --paper:var(--bg); --paper2:var(--bg); --card:var(--bg);
+  --ink:var(--fg); --em:var(--blue); --em-d:var(--blue);
+  --red:var(--fg); --book:var(--bg); --bookline:var(--line);
+  --r:14px; --r-lg:18px;
+  --ui:'Manrope',system-ui,-apple-system,sans-serif;
+}
+[data-theme="dark"],[data-theme="paper"]{--bg:#000000;--fg:#FFFFFF;}
+[data-theme="brand"]{--bg:#FFFFFF;--fg:#000000;}
+
+/* ── Типографика: бир шрифт, бир ритм ── */
+html{font-size:17px;}
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);letter-spacing:-0.01em;
+  -webkit-font-smoothing:antialiased;line-height:1.5;}
+h3{font-size:1.2rem;font-weight:800;letter-spacing:-0.025em;line-height:1.25;}
+h4{font-weight:800;letter-spacing:-0.02em;}
+b,strong{font-weight:700;}
+.muted{color:var(--soft);font-size:0.85rem;line-height:1.5;}
+.wrap{max-width:960px;padding:0 16px 120px;}
+.center{text-align:center;}
+
+/* ── Header ── */
+header{background:var(--bg);border-bottom:1px solid var(--line);backdrop-filter:none;}
+.hrow{padding:11px 16px;gap:12px;flex-wrap:nowrap;}
+.brand{display:flex;align-items:center;gap:11px;min-width:0;}
+.brand .bmark{width:40px;height:40px;flex:none;border-radius:50%;background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-family:'Scheherazade New','Amiri',serif;
+  font-size:1.7rem;line-height:1;padding:0 0 5px;letter-spacing:0;}
+.brand .btxt{display:flex;flex-direction:column;min-width:0;}
+.brand .btxt b{color:var(--fg);font-size:1.05rem;font-weight:800;letter-spacing:-0.03em;line-height:1.15;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.brand .btxt span{font-size:0.7rem;color:var(--soft);font-weight:500;letter-spacing:0;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.themes{gap:6px;}
+.themes button{width:22px;height:22px;border:1px solid var(--line);}
+.themes button.on{box-shadow:0 0 0 2px var(--blue);border-color:var(--bg);}
+
+/* ── Баскычтар: фону КӨК, тексти АК ── */
+.btn{background:var(--blue);color:#FFFFFF;padding:12px 18px;border-radius:12px;font-size:0.9rem;
+  font-weight:700;letter-spacing:-0.015em;min-height:48px;display:inline-flex;align-items:center;
+  justify-content:center;gap:8px;border:2px solid var(--blue);transition:transform .1s;box-shadow:none;}
+.btn:active{transform:scale(.975);}
+.btn.g{background:transparent;color:var(--blue);border:2px solid var(--blue);}
+.btn.r{background:transparent;color:var(--fg);border:2px solid var(--line);}
+.btn.sm{padding:7px 13px;font-size:0.8rem;border-radius:10px;min-height:38px;border-width:1.5px;}
+.btn:disabled{opacity:.5;}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:3px solid var(--blue);outline-offset:2px;}
+
+/* ── Карточкалар: тең-катар, бирдей ички аралык ── */
+.card{background:var(--bg);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:16px;margin-top:12px;box-shadow:none;}
+.card.ustaz{gap:14px;align-items:center;background:var(--bg);border-color:var(--line);}
+.ustaz .photo{width:60px;height:60px;background:var(--blue);border:none;color:#fff;
+  font-family:'Scheherazade New',serif;font-size:1.9rem;padding-bottom:6px;box-shadow:none;}
+.ustaz b{font-size:1.1rem;font-weight:800;letter-spacing:-0.025em;}
+.ustaz .muted{margin-top:4px;}
+.stcard{border:1.5px solid var(--line);border-radius:var(--r);padding:14px;background:var(--bg);box-shadow:none;margin-top:10px;}
+input,select,textarea{padding:12px 14px;border-radius:12px;font-size:0.93rem;border:1.5px solid var(--line);
+  min-height:48px;background:var(--bg);color:var(--fg);}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px color-mix(in srgb,var(--blue) 22%,transparent);}
+::placeholder{color:var(--soft);}
+
+/* ── 3 кадам ── */
+.steps{display:grid;grid-template-columns:1fr;gap:0;margin-top:12px;border:1.5px solid var(--line);border-radius:var(--r-lg);overflow:hidden;}
+.steps .st{display:flex;align-items:center;gap:13px;padding:14px 16px;text-align:left;border:none;border-radius:0;box-shadow:none;background:var(--bg);}
+.steps .st+.st{border-top:1.5px solid var(--line);}
+.steps .st i{display:flex;width:30px;height:30px;flex:none;margin:0;border-radius:50%;background:var(--blue);
+  color:#fff;font-style:normal;font-weight:800;font-size:0.88rem;align-items:center;justify-content:center;}
+.steps .st span{font-size:0.85rem;line-height:1.45;color:var(--fg);display:block;}
+
+/* ── Сабак карталары: чоңураак, тең ── */
+.lcard{padding:17px 16px;border-radius:16px;gap:15px;border:1.5px solid var(--line);
+  box-shadow:none;margin-top:11px;background:var(--bg);align-items:center;}
+.lcard:active{transform:scale(.99);}
+.lnum{width:54px;height:54px;border-radius:16px;font-size:1.2rem;font-weight:800;flex:none;
+  background:var(--bg);color:var(--blue);border:2px solid var(--blue);box-shadow:none;}
+.lcard b{font-size:1.05rem;letter-spacing:-0.02em;line-height:1.3;}
+.lcard .muted{font-size:0.82rem !important;margin-top:4px;display:block;line-height:1.4;}
+.lcard.done .lnum{background:var(--blue);color:#fff;}
+.lcard.lock-li{opacity:1;border-style:dashed;background:var(--bg);}
+.lcard.lock-li .lnum,.lcard.lock-li b{color:var(--soft);}
+.lcard.lock-li .lnum{background:var(--bg);border-color:var(--line);}
+
+/* ── Табдар ── */
+.tabs{gap:8px;}
+.tabs button{padding:10px 15px;border-radius:11px;font-size:0.84rem;min-height:42px;
+  background:var(--bg);color:var(--fg);border:1.5px solid var(--line);font-weight:700;}
+.tabs button.on{background:var(--blue);color:#fff;border-color:var(--blue);}
+
+/* ── Прогресс: тең тизилген статистика ── */
+.prog{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;}
+.chip{background:var(--bg);border:1.5px solid var(--line);border-radius:13px;padding:11px 13px;
+  font-size:0.75rem;font-weight:600;color:var(--soft);display:flex;justify-content:space-between;
+  align-items:center;gap:8px;box-shadow:none;}
+.chip b{color:var(--fg);font-weight:800;font-size:0.9rem;}
+.prog .chip{flex-direction:column;align-items:flex-start;gap:4px;text-align:left;line-height:1.25;}
+.prog .chip b{font-size:1.05rem;letter-spacing:-0.02em;}
+.prog .chip,.prog .chip.warn{background:var(--bg);color:var(--soft);}
+.prog .chip b,.prog .chip.warn b{color:var(--fg);}
+.prog .chip.tot{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;
+  background:var(--blue);border-color:var(--blue);color:#fff;font-size:0.86rem;padding:13px 15px;}
+.prog .chip.tot b{color:#fff;font-size:1.08rem;}
+body.lessonfix .prog .chip{padding:8px 11px;}
+
+/* ── Аракет тилкеси: бирдей туурасы ── */
+.actionbar{gap:9px;margin-top:14px;}
+.actionbar .btn,.actionbar .btn.g{flex:1 1 0;max-width:none;padding:14px 6px;font-size:0.88rem;
+  border-radius:14px;background:transparent;color:var(--blue);border:2px solid var(--blue);box-shadow:none;}
+.actionbar #homeB{background:var(--blue);color:#fff;border-color:var(--blue);}
+#modeInfo{font-size:0.82rem !important;border:1.5px solid var(--line);border-radius:12px;
+  padding:11px 14px;line-height:1.5;color:var(--soft);}
+body.lessonfix #modeInfo{font-size:0.76rem !important;padding:9px 12px;}
+#readCnt{border:2px solid var(--blue);border-radius:14px;padding:11px 14px;font-size:0.86rem;line-height:1.5;}
+
+/* ── Китеп бети ── */
+.phone{background-color:var(--bg);background-image:none;border:1.5px solid var(--line);
+  border-radius:16px;box-shadow:none;}
+.gridlayer{background-image:linear-gradient(to right,color-mix(in srgb,var(--blue) 16%,transparent) 1px,transparent 1px),
+  linear-gradient(to bottom,color-mix(in srgb,var(--blue) 16%,transparent) 1px,transparent 1px);}
+.tok.cur{outline:3px solid var(--blue);background:color-mix(in srgb,var(--blue) 16%,transparent);}
+.tok.mist1{background:transparent;box-shadow:0 0 0 2px var(--blue);border-radius:10px;}
+.tok.mist2{background:var(--blue);color:#fff;box-shadow:none;border-radius:10px;}
+.lockveil{background:color-mix(in srgb,var(--blue) 92%,transparent);backdrop-filter:none;color:#fff;font-size:1.05rem;gap:12px;}
+.lockveil .btn{background:#fff;color:var(--blue);border-color:#fff;}
+.tip{background:var(--fg);color:var(--bg);border-radius:12px;font-weight:600;}
+.rub{border:1.5px dashed var(--blue);background:color-mix(in srgb,var(--blue) 10%,transparent);}
+
+/* ── ОКУУ РЕЖИМИ: китеп чоңоёт, ашыкча баары жашырылат ── */
+body.reading header,
+body.reading #modeInfo,
+body.reading .prog,
+body.reading #lessTop,
+body.reading .vidwrap,
+body.reading .tools{display:none !important;}
+body.reading.lessonfix #app{height:100dvh;padding-top:6px;padding-bottom:2px;}
+body.reading .phone-outer{margin-top:0;}
+body.reading .phone{aspect-ratio:auto;height:100%;max-height:100%;border:none;}
+body.reading .actionbar .btn{display:none;}
+body.reading .actionbar #homeB{display:inline-flex;flex:1;max-width:none;}
+body.lessonfix .phone{aspect-ratio:1/1.72;}
+
+/* ── Модалдар ── */
+.modal-bg{background:color-mix(in srgb,var(--fg) 62%,transparent);backdrop-filter:none;}
+.modal{background:var(--bg);border-radius:20px;padding:22px;border:1.5px solid var(--line);box-shadow:none;max-width:480px;}
+.opt{font-size:2.2rem;padding:15px 10px;border-radius:15px;border:2px solid var(--line);margin:10px 0;background:var(--bg);}
+.opt.ok{border-color:var(--blue);background:color-mix(in srgb,var(--blue) 14%,transparent);}
+.opt.no{border-color:var(--fg);background:transparent;opacity:.5;}
+
+/* ── Тест тактайчалары ── */
+.qw{border-radius:15px;border:2px solid var(--line);padding:10px 12px 8px;min-width:70px;background:var(--bg);}
+.qw .qtm{font-size:0.64rem;font-weight:600;color:var(--soft);}
+.qw.mk1{background:transparent;border-color:var(--blue);}
+.qw.mk2{background:var(--blue);border-color:var(--blue);color:#fff;}
+
+/* ── Башка ── */
+.badge{padding:4px 12px;font-size:0.72rem;border-radius:99px;}
+.badge.on{background:var(--blue);color:#fff;}
+.badge.off{background:transparent;color:var(--soft);border:1.5px solid var(--line);}
+.aboutCard{border-radius:20px;padding:26px 20px;box-shadow:none;background:var(--bg);border:1.5px solid var(--line);}
+.aboutCard .photo2{border:none;background-color:var(--blue);color:#fff;box-shadow:none;
+  font-family:'Scheherazade New',serif;}
+.aboutCard h4{font-size:1.3rem;}
+.aboutCard .rule{background:var(--blue);width:44px;height:3px;border-radius:3px;}
+.aboutCard p{font-size:0.92rem;color:var(--soft);}
+#toast{bottom:92px;padding:13px 20px;border-radius:14px;font-size:0.87rem;font-weight:600;
+  background:var(--fg);color:var(--bg);box-shadow:none;}
+.tools{background:var(--bg);border-top:1.5px solid var(--line);border-radius:16px 16px 0 0;box-shadow:none;}
+.rec-item{border-radius:15px;padding:14px;border:1.5px solid var(--line);background:var(--bg);}
+table{font-size:0.82rem;}
+th{font-weight:700;color:var(--soft);font-size:0.73rem;}
+th,td{border-bottom:1px solid var(--line);padding:8px 5px;}
+.wa{color:var(--blue);}
+.voicewarn{background:var(--blue);color:#fff;border-radius:14px;font-size:0.94rem;}
+.rec-dot{background:var(--blue);}
+.vidwrap .vidin>*{border-radius:16px;}
+.vidctl button{background:var(--blue);color:#fff;}
+.fixb{background:transparent;border:1.5px solid var(--blue);color:var(--blue);}
+.kbd button{background:var(--bg);border:1.5px solid var(--line);color:var(--fg);}
+.upload-btn{background-color:var(--blue);}
+.video-upload-box{background-color:var(--bg);border-color:var(--blue);color:var(--fg);}
+.studio .stage{background:#fff;background-image:none;}
+.studio .tok{color:#000;}
+.lock-li .lk{color:var(--soft);}
+
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;transition-duration:.01ms !important;}}
+
+</style>
+</head>
+<body data-theme="brand">
+<header><div class="hrow"><div class="brand"><span class="bmark">ع</span><span class="btxt"><b>Муалим Сани</b><span>Куран окуу платформасы</span></span></div><span class="grow"></span><div class="themes row"><button style="background:#FFFFFF;" data-th="brand" title="Ак"></button><button style="background:#000000;" data-th="dark" title="Кара"></button></div><button class="btn sm g" id="teacherBtn" style="display:none;">Мугалим</button>
+</div></header>
+<div class="wrap" id="app"></div><script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+import { getDatabase, ref, get, set, update, onValue, increment } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js';
+import { getStorage, ref as sref, uploadBytesResumable, getDownloadURL } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js';
+const fbApp=initializeApp({
+  apiKey:"AIzaSyCV6F-8hx9QdlICG6hkogprMTkaw8SCqeM",authDomain:"jurnal55.firebaseapp.com",
+  databaseURL:"https://jurnal55-default-rtdb.firebaseio.com",projectId:"jurnal55",
+  storageBucket:"jurnal55.firebasestorage.app",messagingSenderId:"688921480621",
+  appId:"1:688921480621:web:8ff09c733f3b1b09932524"});
+const db=getDatabase(fbApp);
+const storage=getStorage(fbApp);
+const ROOT="platform";
+
+const FONTS=[["'Scheherazade New',serif","Шехерезада"],["'Amiri',serif","Амири"],["'Lateef',serif","Латиф"],["'Reem Kufi',sans-serif","Куфи"]];
+const LETTERS="ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي ء أ إ آ ة ى لا".split(" ");
+const HARAKAT=["َ","ِ","ُ","ً","ٍ","ٌ","ْ","ّ","ٰ"];
+
+let data={lessons:{}}, teacher=false, ready=false;
+let view={page:"home",lid:null};
+let sel=null, multi=[], undoStack=[], redoStack=[], saveTimer=null;
+let student=localStorage.getItem("plat_student")||null;
+let homeRead=null, statsCache=null;
+let gridOn=localStorage.getItem("plat_grid")==="1";
+let snapOn=localStorage.getItem("plat_snap")!=="0";
+let lastSel=null, role=null;
+let vidMini=false, vidHide=false, tview="lessons";
+let vidNode=null, vidNodeLid=null; // видео кайра түзүлбөйт — ойноп турганы токтобойт
+function dropVid(){if(vidNode){try{vidNode.pause&&vidNode.pause();}catch(e){}try{vidNode.remove();}catch(e){}}vidNode=null;vidNodeLid=null;}
+function mountVid(L){
+  const box=qs("#vidin");if(!box)return;
+  if(!vidNode||vidNodeLid!==view.lid){dropVid();const d=document.createElement("div");d.innerHTML=embedHTML(L.vid,false);vidNode=d.firstElementChild;vidNodeLid=view.lid;}
+  if(vidNode&&vidNode.parentElement!==box)box.appendChild(vidNode);
+}
+
+const esc=s=>String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const uid=()=>`t_${Date.now().toString(36)}_${Math.random().toString(36).slice(2,6)}`;
+function hashStr(s){let h=5381;for(let i=0;i<s.length;i++)h=((h<<5)+h+s.charCodeAt(i))&0xffffffff;return(h>>>0).toString(36);}
+const skey=n=>n.toLowerCase().trim().replace(/[.#$/\[\]\s]+/g,"_").slice(0,40);
+
+/* ═════ Окуучуга көрүнгөн тексттер — Устаз "Тексттер" бөлүмүнөн өзгөртөт ═════ */
+const UIT={
+  loginTitle:"Кирүү",
+  loginHint:"Атыңызды жазыңыз. Устаз пароль берген болсо — аны да жазыңыз. Ошол пароль менен каалаган телефондон, каалаган браузерден кире аласыз.",
+  stepsOn:"1",
+  step1:"Сабакты ачыңыз — тамганы бассаңыз Устаздын үнү угулат",
+  step2:"Үй окуусу — Устаздан кийин үн чыгарып кайталайсыз",
+  step3:"Тест тапшырасыз — өтсөңүз кийинки сабак ачылат",
+  lessonsTitle:"Сабактар",
+  lockPay:"Ачуу үчүн басыңыз — Устазга жазасыз",
+  lockProg:"Мурунку сабактан өтүңүз",
+  emptyLessons:"Сабактар жакында кошулат",
+  tapHint:"Тамганы бассаңыз — Устаздын үнү угулат. Кармап турсаңыз — окулушу чыгат.",
+  readHint:"Устаздын үнүн угуп, белгиленген тамганы үн чыгарып кайталаңыз — белги ошондо гана жылат",
+  placeTitle:"Деңгээлимди аныктайм",
+  placeHint:"Мурун окугансызбы? Кыска тест — кайсы сабактан баштоону көрсөтөбүз",
+  wrongPass:"Пароль туура эмес. Устаздан сураңыз."
+};
+function T(k){const v=data&&data.ui&&data.ui[k];return (v!=null&&v!=="")?v:(UIT[k]||"");}
+
+/* ═════ Метрика: канча адам кирди, 1-сабакты ачты, катталды ═════ */
+const MDAY=()=>new Date().toISOString().slice(0,10);
+function metric(kind){
+  try{
+    const done=JSON.parse(localStorage.getItem("plat_mx")||"{}");
+    const key=kind+":"+MDAY();
+    if(done[key])return;
+    done[key]=1;localStorage.setItem("plat_mx",JSON.stringify(done));
+    update(ref(db,`${ROOT}/metrics/${MDAY()}`),{[kind]:increment(1)}).catch(()=>{});
+  }catch(e){}
+}
+
+/* ═════ 500 окуучуга ылайык: ар бир окуучунун прогресси өз бутагында ═════ */
+function mirrorProgress(lid,obj){
+  if(!student)return;
+  const m=Object.assign({},obj);delete m.mist;
+  update(ref(db,`${ROOT}/progress/${skey(student)}/${lid}`),m).catch(()=>{});
+}
+async function myProgress(){
+  if(!student)return {};
+  try{const s2=await get(ref(db,`${ROOT}/progress/${skey(student)}`));if(s2.exists())return s2.val();}catch(e){}
+  return {};
+}
+
+const qs=s=>document.querySelector(s);
+const app=document.getElementById("app");
+
+/* undefined маанилер Firebase set'ти толук буздуруп, ЭЧ НЕРСЕ сакталбай калчу — эми тазалап жөнөтөбүз */
+function cleanData(o){return JSON.parse(JSON.stringify(o));}
+let saveBadgeT=null;
+function saveBadge(ok,msg){
+  let b=qs("#saveBadge");
+  if(!b){b=document.createElement("div");b.id="saveBadge";b.style.cssText="position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:99;padding:7px 16px;border-radius:99px;font-size:0.78rem;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,0.25);transition:opacity .3s;";document.body.appendChild(b);}
+  b.style.background=ok?"var(--em)":"var(--red)";b.style.color="#fff";
+  b.textContent=msg;b.style.opacity="1";b.style.display="block";
+  clearTimeout(saveBadgeT);
+  if(ok)saveBadgeT=setTimeout(()=>{const x=qs("#saveBadge");if(x){x.style.opacity="0";setTimeout(()=>{if(x)x.style.display="none";},350);}},1600);
+}
+let saveRetryT=null;
+function doSave(){
+  if(!teacher)return;
+  set(ref(db,ROOT+"/data"),cleanData(data))
+    .then(()=>{saveBadge(true,"✓ Сакталды");clearTimeout(saveRetryT);})
+    .catch(e=>{console.error(e);saveBadge(false,"Сакталган жок — кайра аракет…");clearTimeout(saveRetryT);saveRetryT=setTimeout(doSave,2500);});
+}
+function scheduleSave(){clearTimeout(saveTimer);saveTimer=setTimeout(doSave,450);}
+/* Кийинки орун: оңдон солго агым — акыркы сөздүн сол жагына, катар бүтсө жаңы катар */
+function nextPos(L,step){
+  const ts=L.tokens||[];
+  if(!ts.length)return{x:88,y:12};
+  const last=ts[ts.length-1];
+  let x=last.x-(step||15), y=last.y;
+  if(x<9){x=88;y=Math.min(95,last.y+9);}
+  return{x,y};
+}
+/* Толук текстти баракка өзү тизип чыгуу (оңдон солго, сап-сап) */
+function layoutBulk(L,text,mode,size,gap,clear,font,bold){
+  snapshot();
+  if(clear)L.tokens=[];
+  L.tokens=L.tokens||[];
+  const HARAKAT_RE=/\S[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E8\u06EA-\u06ED]*/g;
+  const lines=text.split(/\n+/).map(l=>l.trim()).filter(Boolean);
+  let y=12;
+  if(L.tokens.length)y=Math.min(93,Math.max(...L.tokens.map(t=>+t.y||0))+gap);
+  let added=0;
+  for(const line of lines){
+    const parts=mode==="char"?(line.match(HARAKAT_RE)||[]):line.split(/\s+/).filter(Boolean);
+    const n=parts.length;if(!n)continue;
+    parts.forEach((ar,i)=>{
+      const x=n===1?50:92-(i*(84/(n-1)));
+      const nt={id:uid(),ar,x:+x.toFixed(1),y:+y.toFixed(1),size,font:font||FONTS[0][0],sp:0};if(bold)nt.b=1;L.tokens.push(nt);
+      added++;
+    });
+    y=Math.min(96,y+gap);
+  }
+  scheduleSave();
+  return added;
+}
+function snapshot(){const L=data.lessons[view.lid];if(!L)return;undoStack.push(JSON.stringify(L.tokens||[]));if(undoStack.length>80)undoStack.shift();redoStack=[];}
+function undo(){const L=data.lessons[view.lid];if(!L||!undoStack.length)return;redoStack.push(JSON.stringify(L.tokens||[]));L.tokens=JSON.parse(undoStack.pop());sel=null;multi=[];scheduleSave();render();}
+function redo(){const L=data.lessons[view.lid];if(!L||!redoStack.length)return;undoStack.push(JSON.stringify(L.tokens||[]));L.tokens=JSON.parse(redoStack.pop());sel=null;multi=[];scheduleSave();render();}
+function lset(L){return Object.assign({listen:5,pause:2,hints:3,pass:90,home:3,testQ:10,testVoice:1,say:7,fix:2},data.defaults||{},L.set||{});}
+/* Микрофон жана жаздыруу форматы: колдоого алынганын тандайбыз */
+const MIC_OPTS={audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true}};
+/* Устаздын жазуулары үчүн: иштетүүсүз таза үн (телефон-үн эффектисиз) */
+const MIC_HQ={audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false,channelCount:1,sampleRate:48000}};
+function recMime(){
+  if(!window.MediaRecorder)return"";
+  const list=["audio/webm;codecs=opus","audio/webm","audio/mp4","audio/ogg;codecs=opus"];
+  for(const m of list){try{if(MediaRecorder.isTypeSupported(m))return m;}catch(e){}}
+  return"";
+}
+/* Устаздын үнүн WAV кылабыз — WAV БАРДЫК телефондо ойнойт (webm/opus кээ бирлеринде ойнобойт) */
+async function toWav(blob,maxSec){
+  const AC=window.AudioContext||window.webkitAudioContext;
+  const OAC=window.OfflineAudioContext||window.webkitOfflineAudioContext;
+  if(!AC||!OAC)return null;
+  let ac=null;
+  try{
+    ac=new AC();
+    const ab=await blob.arrayBuffer();
+    const buf=await new Promise((res,rej)=>{const r=ac.decodeAudioData(ab,res,rej);if(r&&r.then)r.then(res,rej);});
+    const sr=16000;
+    const dur=Math.min(buf.duration,maxSec||15);
+    if(!dur||!isFinite(dur))throw new Error("dur");
+    const off=new OAC(1,Math.max(1,Math.ceil(dur*sr)),sr);
+    const s=off.createBufferSource();s.buffer=buf;s.connect(off.destination);s.start();
+    const rd=await off.startRendering();
+    let d0=rd.getChannelData(0);
+    // 1) башындагы/аягындагы тынчтыкты кыркабыз — таза, кыска үн
+    let pk0=0;for(let i=0;i<d0.length;i++){const v=Math.abs(d0[i]);if(v>pk0)pk0=v;}
+    const thr=Math.max(0.012,pk0*0.06);
+    let a0=0,b0=d0.length-1;
+    while(a0<b0&&Math.abs(d0[a0])<thr)a0++;
+    while(b0>a0&&Math.abs(d0[b0])<thr)b0--;
+    a0=Math.max(0,a0-Math.round(sr*0.04));b0=Math.min(d0.length-1,b0+Math.round(sr*0.08));
+    const d=(b0-a0>sr*0.08)?d0.slice(a0,b0+1):d0;
+    const n=d.length;
+    // 2) бирдей катуулукка келтиребиз
+    let pk=0;for(let i=0;i<n;i++){const v=Math.abs(d[i]);if(v>pk)pk=v;}
+    const gain=pk>0.01?Math.min(4,0.92/pk):1;
+    for(let i=0;i<n;i++)d[i]*=gain;
+    // 3) башы-аягына жумшак кирүү/чыгуу — "чырт" эткен добуш болбойт
+    const fd=Math.min(Math.round(sr*0.012),Math.floor(n/2));
+    for(let i=0;i<fd;i++){d[i]*=i/fd;d[n-1-i]*=i/fd;}
+    const dv=new DataView(new ArrayBuffer(44+n*2));
+    const ws=(o,t)=>{for(let i=0;i<t.length;i++)dv.setUint8(o+i,t.charCodeAt(i));};
+    ws(0,"RIFF");dv.setUint32(4,36+n*2,true);ws(8,"WAVE");ws(12,"fmt ");
+    dv.setUint32(16,16,true);dv.setUint16(20,1,true);dv.setUint16(22,1,true);
+    dv.setUint32(24,sr,true);dv.setUint32(28,sr*2,true);dv.setUint16(32,2,true);dv.setUint16(34,16,true);
+    ws(36,"data");dv.setUint32(40,n*2,true);
+    for(let i=0;i<n;i++){let v=Math.max(-1,Math.min(1,d[i]));dv.setInt16(44+i*2,v<0?v*32768:v*32767,true);}
+    try{ac.close();}catch(e){}
+    return new Blob([dv.buffer],{type:"audio/wav"});
+  }catch(e){try{ac&&ac.close();}catch(e2){}return null;}
+}
+/* Микрофон: уруксат берилбесе — эмне кылууну кыргызча так түшүндүрөбүз */
+async function micStream(hq){
+  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){
+    openModal(`<h3>Микрофон колдоого алынбайт</h3><p class="muted mt">Бул браузер микрофон менен иштебейт. Chrome браузеринен ачып көрүңүз.</p><button class="btn g mt" style="width:100%;" id="mc">Жабуу</button>`);
+    qs("#mc").onclick=closeModal;return null;
+  }
+  try{return await navigator.mediaDevices.getUserMedia(hq?MIC_HQ:MIC_OPTS);}
+  catch(e0){if(hq){try{return await navigator.mediaDevices.getUserMedia(MIC_OPTS);}catch(e1){micHelp(e1&&e1.name);return null;}}else{micHelp(e0&&e0.name);return null;}}
+}
+function micHelp(nm){
+  let why="Микрофонго уруксат берилген жок.";
+  if(nm==="NotFoundError"||nm==="DevicesNotFoundError")why="Телефондон микрофон табылган жок.";
+  else if(nm==="NotReadableError"||nm==="TrackStartError")why="Микрофонду башка колдонмо ээлеп турат (чалуу, диктофон, Zoom). Аны жаап, кайра аракет кылыңыз.";
+  openModal(`<h3>Микрофон иштебей жатат</h3><p class="muted mt">${why}</p><div class="card"><b>Кантип оңдойм:</b><p class="muted mt" style="line-height:1.9;"><b>1.</b> Браузердин жогорку сабындагы дарек жанындагы кулпу же тууралоо белгисин басыңыз<br/>
+  <b>2.</b> <b>Уруксаттар / Разрешения</b> → <b>Микрофон</b> → <b>Уруксат берүү (Разрешить)</b><br/>
+  <b>3.</b> Ушул баракты жаңылап (↻), кайра баштаңыз</p><p class="muted mt" style="line-height:1.9;">Же телефондун жөндөөлөрүнөн: <b>Тууралоолор → Колдонмолор → Chrome → Уруксаттар → Микрофон → Уруксат</b></p></div><div class="row mt"><button class="btn grow" id="mcR">Кайра суроо</button><button class="btn g" id="mc">Жабуу</button></div>`);
+  qs("#mc").onclick=closeModal;
+  qs("#mcR").onclick=async()=>{try{const s=await navigator.mediaDevices.getUserMedia(MIC_OPTS);s.getTracks().forEach(t=>t.stop());closeModal();toast("Микрофон иштеди — эми кайра баштаңыз");}catch(e){toast("Дагы деле жабык — жогорудагы кадамдарды аткарыңыз");}};
+}
+function recExt(t){t=t||"";if(t.includes("mp4"))return"m4a";if(t.includes("ogg"))return"ogg";return"webm";}
+/* Жыйынтык: Үй окуусу 30% + Таануу тести 30% + Айтуу (Устаздын баасы) 40% */
+function passScore(r,s){
+  const home=Math.min(100,Math.round((r?.reads||0)/Math.max(1,s.home)*100));
+  const rec=r?.best||0;
+  const g=(r&&r.grade!=null)?r.grade:null;
+  const fin=g!=null?Math.round(home*0.3+rec*0.3+g*0.4):null;
+  const passed=!!(r&&(r.passed||(fin!=null&&fin>=s.pass)));
+  return{home,rec,g,fin,passed,mark:r?.mark5};
+}
+function readOrder(toks){return[...toks].sort((a,b)=>{const ra=Math.round(a.y/8),rb=Math.round(b.y/8);return ra-rb||b.x-a.x;});}
+function openModal(html){const bg=document.createElement("div");bg.className="modal-bg";bg.id="mbg";bg.innerHTML=`<div class="modal">${html}</div>`;bg.onclick=e=>{if(e.target===bg)bg.remove();};document.body.appendChild(bg);}
+function closeModal(){qs("#mbg")?.remove();}
+function aboutHTML(){
+  const pr=data.profile||{};if(!pr.aboutFull)return"";
+  return`<div class="aboutCard"><div class="photo2" ${pr.photo?`style="background-image:url('${esc(pr.photo)}');"`:""}>${pr.photo?"":"ع"}</div><h4>${esc(pr.pname||"Муалим Сани")}</h4><div class="rule"></div><p>${esc(pr.aboutFull)}</p>
+    ${pr.wa?`<a class="btn mt" style="display:inline-block;text-decoration:none;" target="_blank" href="https://wa.me/${esc(pr.wa)}">Байланышуу</a>`:""}
+  </div>`;
+}
+function ustazBlock(){
+  const pr=data.profile||{};
+  const photo=pr.photo?`<div class="photo" style="background-image:url('${esc(pr.photo)}');background-size:cover;background-position:center;"></div>`:`<div class="photo">ع</div>`;
+  return`<div class="card ustaz">${photo}<div><b>${esc(pr.pname||"Муалим Сани")}</b><p class="muted">${esc(pr.about||"Куран окууну нөлдөн баштап үйрөнүү")}</p></div></div>`;
+}
+
+/* видео embed */
+function embedHTML(url,auto=true){
+  if(!url)return"";const u=url.trim();let id=null;
+  let m=u.match(/youtu\.be\/([A-Za-z0-9_-]{6,})/)||u.match(/[?&]v=([A-Za-z0-9_-]{6,})/)||u.match(/youtube\.com\/(?:live|embed|shorts)\/([A-Za-z0-9_-]{6,})/);
+  if(m)id=m[1];
+  if(id)return`<iframe class="vidbox" src="https://www.youtube.com/embed/${id}?autoplay=${auto?1:0}&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+  if(/\.(mp4|webm|mov)(\?|$)/i.test(u)||u.startsWith("blob:")||u.startsWith("data:"))return`<video class="vidbox" src="${esc(u)}" controls ${auto?"autoplay ":""}playsinline preload="auto" controlsList="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false"></video>`;
+  return`<iframe class="vidbox" src="${esc(u)}" allow="autoplay; camera; microphone; fullscreen" allowfullscreen></iframe>`;
+}
+function openVideoModal(url,title){openModal(`<b>${esc(title||"Видео сабак")}</b><div class="mt">${embedHTML(url)}</div><button class="btn g mt" style="width:100%;" id="vc">Жабуу</button>`);qs("#vc").onclick=closeModal;}
+function videoUploadHTML(L){
+  const showVid=L.vid&&(/\.(mp4|webm|mov)(\?|$)/i.test(L.vid)||L.vid.startsWith("http")||L.vid.startsWith("blob:"));
+  return`<div class="video-upload-box"><h3>Сабактын видеосун жүктөө</h3><div class="file-select-area"><label for="videoInput" class="upload-btn">Компьютерден видео файлды тандоо</label><input type="file" id="videoInput" accept="video/*"></div><p class="muted" id="videoUploadStatus" style="display:none;margin-top:10px;"></p><div class="video-preview-area" style="margin-top:15px;"><video id="videoPreview" class="lessonvid" controls style="display:${showVid?"block":"none"};"${showVid?` src="${esc(L.vid)}"`:""}>
+      Сиздин браузериңиз видеону колдобойт.
+    </video></div>
+</div>`;
+}
+function previewVideo(event){
+  const file=event.target.files[0];
+  const videoPreview=document.getElementById("videoPreview");
+  const status=document.getElementById("videoUploadStatus");
+  if(!file||!videoPreview)return;
+  const fileURL=URL.createObjectURL(file);
+  videoPreview.src=fileURL;
+  videoPreview.style.display="block";
+  const lid=view.lid;
+  if(!lid||!data.lessons[lid])return;
+  if(status){status.style.display="block";status.textContent="Жүктөлүүдө… 0%";}
+  const ext=(file.name.split(".").pop()||"mp4").replace(/[^a-z0-9]/gi,"");
+  const path=`videos/${lid}/${uid()}.${ext}`;
+  const task=uploadBytesResumable(sref(storage,path),file);
+  task.on("state_changed",
+    snap=>{const p=snap.totalBytes?Math.round(snap.bytesTransferred/snap.totalBytes*100):0;if(status)status.textContent=`Жүктөлүүдө… ${p}%`;},
+    err=>{if(status)status.textContent="Жүктөө катасы: "+err.message;},
+    async()=>{const durl=await getDownloadURL(task.snapshot.ref);data.lessons[lid].vid=durl;scheduleSave();videoPreview.src=durl;URL.revokeObjectURL(fileURL);if(status)status.textContent="Видео сабакка байланды!";}
+  );
+}
+window.previewVideo=previewVideo;
+
+let curAudio=null;
+/* Үндөр алдын ала жүктөлүп, ЧЕЧМЕЛЕНИП коюлат — тийгенде эч кечикпей угулат */
+const AUD={},ABUF={};
+let AC=null,curSrc=null,playSeq=0;
+function getAC(){const C=window.AudioContext||window.webkitAudioContext;if(!C)return null;if(!AC)AC=new C();if(AC.state==="suspended")AC.resume().catch(()=>{});return AC;}
+async function _fetchBuf(u){
+  try{
+    let resp=null;
+    if(window.caches&&!u.startsWith("data:")){ // бир жолу жүктөлгөн үн телефондо сакталып калат
+      try{
+        const c=await caches.open("ka-aud");
+        resp=await c.match(u);
+        if(!resp){resp=await fetch(u);if(resp&&resp.ok)await c.put(u,resp.clone());}
+      }catch(e){resp=null;}
+    }
+    if(!resp)resp=await fetch(u);
+    const ab=await resp.arrayBuffer();
+    const ac=getAC();if(!ac)return null;
+    const buf=await new Promise((res,rej)=>{const rr=ac.decodeAudioData(ab,res,rej);if(rr&&rr.then)rr.then(res,rej);});
+    ABUF[u]={buf};return buf;
+  }catch(e){ABUF[u]={bad:true};return null;}
+}
+function loadBuf(u){
+  if(ABUF[u])return ABUF[u].buf?Promise.resolve(ABUF[u].buf):(ABUF[u].p||Promise.resolve(null));
+  const p=_fetchBuf(u);ABUF[u]={p};
+  p.then(b=>{if(b)ABUF[u]={buf:b};});
+  return p;
+}
+async function cacheLesson(L,onProg){
+  const urls=[...new Set((L.tokens||[]).filter(t=>t.audio&&!t.audio.startsWith("data:")).map(t=>t.audio))];
+  let done=0;
+  for(let i=0;i<urls.length;i+=3){
+    await Promise.all(urls.slice(i,i+3).map(u=>loadBuf(u).finally(()=>{done++;onProg&&onProg(done,urls.length);})));
+  }
+  return urls.length;
+}
+function preloadTokAudio(L){
+  const urls=[...new Set((L.tokens||[]).filter(t=>t.audio&&!ABUF[t.audio]).map(t=>t.audio))];
+  let i=0;
+  const next=()=>{if(i>=urls.length)return;loadBuf(urls[i++]).finally(next);};
+  next();next();next(); // 3тен кезек менен — тармак тыгылбайт
+}
+let toastT=null;
+function toast(msg){
+  let t=qs("#toast");
+  if(!t){t=document.createElement("div");t.id="toast";document.body.appendChild(t);}
+  t.textContent=msg;t.classList.add("show");
+  clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove("show"),2800);
+}
+/* Кээ бир телефондор биринчи тийүүгө чейин үндү кулпулап турат — биринчи эле тийүүдө ачып коёбуз */
+let audioUnlocked=false;
+function unlockAudio(){
+  if(audioUnlocked)return;audioUnlocked=true;
+  try{const AC=window.AudioContext||window.webkitAudioContext;if(AC){const c=new AC();const o=c.createOscillator();const g=c.createGain();g.gain.value=0;o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+0.01);if(c.state==="suspended")c.resume();setTimeout(()=>{try{c.close();}catch(e){}},300);}}catch(e){}
+  try{speechSynthesis.getVoices();}catch(e){}
+}
+addEventListener("pointerdown",()=>{unlockAudio();getAC();},{once:true,capture:true});
+addEventListener("touchend",unlockAudio,{once:true,capture:true});
+function arVoice(){
+  try{
+    const vs=speechSynthesis.getVoices()||[];
+    return vs.find(v=>/^ar[-_]/i.test(v.lang)||v.lang==="ar")||vs.find(v=>/arab/i.test(v.name))||null;
+  }catch(e){return null;}
+}
+let ttsWarned=false;
+function playUrl(u){try{const a=new Audio(u);a.play().catch(()=>{});}catch(e){}}
+function playTok(tk,onEnd){
+  if(curAudio){curAudio.pause();curAudio=null;}
+  try{speechSynthesis.cancel();}catch(e){}
+  if(curSrc){try{curSrc.onended=null;curSrc.stop();}catch(e){}curSrc=null;}
+  if(tk.audio){
+    const ac=getAC();
+    const playB=buf=>{const sn=ac.createBufferSource();sn.buffer=buf;sn.connect(ac.destination);sn.onended=()=>{if(curSrc===sn)curSrc=null;onEnd&&onEnd();};curSrc=sn;sn.start(0);};
+    if(ac){
+      const cached=ABUF[tk.audio]&&ABUF[tk.audio].buf;
+      if(cached){playB(cached);return;} // заматта
+      const my=++playSeq;
+      loadBuf(tk.audio).then(buf=>{
+        if(playSeq!==my)return; // ортодо башка тамга басылса — эскисин ойнотпойбуз
+        if(buf){playB(buf);return;}
+        const a=new Audio(tk.audio);curAudio=a;
+        a.onended=()=>{if(curAudio===a)curAudio=null;onEnd&&onEnd();};
+        a.onerror=()=>{if(curAudio===a)curAudio=null;toast("Бул үн ушул телефондо ойнободу");onEnd&&onEnd();};
+        a.play().catch(()=>{onEnd&&onEnd();});
+      });
+      return;
+    }
+    const a=new Audio(tk.audio);curAudio=a;
+    a.onended=()=>{if(curAudio===a)curAudio=null;onEnd&&onEnd();};
+    a.play().catch(()=>{onEnd&&onEnd();});
+    return;
+  }
+  // Үн жазылбаган тамга: телефондун арабча үнү менен окутабыз (бар болсо)
+  const speak=()=>{
+    const v=arVoice();
+    const u=new SpeechSynthesisUtterance(tk.ar);
+    if(v)u.voice=v;
+    u.lang=(v&&v.lang)||"ar-SA";u.rate=0.7;
+    u.onend=()=>onEnd&&onEnd();
+    try{speechSynthesis.speak(u);}catch(e){onEnd&&onEnd();}
+    if(!v&&!ttsWarned){ttsWarned=true;setTimeout(()=>{if(!speechSynthesis.speaking){toast("Бул телефондо арабча үн табылган жок — Устаз үн жазган тамгалар гана угулат");onEnd&&onEnd();}},700);}
+  };
+  const vs=(()=>{try{return speechSynthesis.getVoices()||[];}catch(e){return[];}})();
+  if(!vs.length){ // үндөр кийин жүктөлөт — бир жолу күтөбүз
+    let done=false;
+    try{speechSynthesis.onvoiceschanged=()=>{if(!done){done=true;speak();}};}catch(e){}
+    setTimeout(()=>{if(!done){done=true;speak();}},400);
+  }else speak();
+}
+
+/* статистика */
+async function loadStats(lid){
+  if(!student)return null;
+  try{const s=await get(ref(db,`${ROOT}/stats/${lid}/${skey(student)}`));statsCache=s.exists()?s.val():{name:student,reads:0,words:0,listens:0,tests:0,best:0,passed:false,hints:0};}
+  catch(e){statsCache={name:student,reads:0,words:0,listens:0,tests:0,best:0,passed:false,hints:0};}
+  return statsCache;
+}
+function bump(lid,patch){if(!student||!statsCache)return;Object.assign(statsCache,patch,{name:student,last:Date.now()});set(ref(db,`${ROOT}/stats/${lid}/${skey(student)}`),statsCache).catch(()=>{});mirrorProgress(lid,statsCache);}
+function askStudentName(cb){
+  openModal(`<h3>${esc(T("loginTitle"))}</h3><p class="muted" style="margin:6px 0 12px;">${esc(T("loginHint"))}</p><input id="stn" placeholder="Аты-жөнүңүз" value="${esc(localStorage.getItem("plat_student")||"")}"/><input id="stp" class="mt" placeholder="Пароль (Устаз берген болсо)" autocapitalize="characters"/><p id="sterr" class="mt" style="display:none;font-weight:700;font-size:0.85rem;"></p><button class="btn mt" style="width:100%;" id="stok">Кирүү</button>`);
+  const go=async()=>{
+    const b=qs("#stok"),e2=qs("#sterr");
+    const nm=qs("#stn").value.trim();if(!nm)return;
+    const pw=qs("#stp").value.trim();
+    b.disabled=true;b.textContent="Текшерилүүдө…";
+    let g=null;try{const r=await get(ref(db,`${ROOT}/grants/${skey(nm)}`));g=r.exists()?r.val():null;}catch(e){}
+    b.disabled=false;b.textContent="Кирүү";
+    if(g&&g.pass){
+      if(pw.toUpperCase()!==String(g.pass).toUpperCase()){e2.textContent=T("wrongPass");e2.style.display="block";return;}
+      localStorage.setItem("plat_pass",String(g.pass).toUpperCase());
+    }else{localStorage.removeItem("plat_pass");}
+    student=nm;localStorage.setItem("plat_student",nm);
+    metric("reg");closeModal();cb&&cb();
+  };
+  qs("#stok").onclick=go;
+  qs("#stp").onkeydown=e=>{if(e.key==="Enter")go();};
+}
+function studentLogout(){
+  student=null;localStorage.removeItem("plat_student");localStorage.removeItem("plat_pass");
+  localStorage.removeItem("plat_placed");view={page:"home"};render();
+}
+
+/* кирүү */
+async function teacherToggle(){
+  if(teacher){teacher=false;role=null;sel=null;multi=[];view={page:"home"};render();return;}
+  if(!ready){alert("Сайт жүктөлүп бүтө элек — 2-3 секунддан кийин кайра басыңыз");return;}
+  const bio=localStorage.getItem("plat_bio");
+  if(bio&&localStorage.getItem("plat_bio_role")==="owner"&&window.PublicKeyCredential){try{await navigator.credentials.get({publicKey:{challenge:crypto.getRandomValues(new Uint8Array(16)),allowCredentials:[{id:Uint8Array.from(atob(bio),c=>c.charCodeAt(0)),type:"public-key"}],userVerification:"required",timeout:30000}});role="owner";teacher=true;view={page:"tlessons"};render();return;}catch(e){}}
+  // Пароль орнотуу формасы БИР ГАНА учурда: маалымат толук жүктөлүп, пароль чын эле коюла элек болсо
+  const creating=ready&&!data.auth?.hash;
+  openModal(`<h3>${creating?"Мугалим паролун орнотуу":"Мугалим режимине кирүү"}</h3><input id="pw1" type="password" class="mt" placeholder="Пароль"/>${creating?`<input id="pw2" type="password" class="mt" placeholder="Кайталаңыз"/>`:""}<p id="perr" class="muted" style="color:var(--red);display:none;margin-top:6px;"></p><div class="row mt"><button class="btn grow" id="pok">${creating?"Орнотуу":"Кирүү"}</button><button class="btn g" id="pc">Жабуу</button></div>`);
+  qs("#pc").onclick=closeModal;
+  qs("#pok").onclick=()=>{const p1=qs("#pw1").value,err=qs("#perr");if(creating){const p2=qs("#pw2").value;if(p1.length<4){err.textContent="Кеминде 4 белги";err.style.display="block";return;}if(p1!==p2){err.textContent="Дал келген жок";err.style.display="block";return;}
+    if(data.auth?.hash){err.textContent="Пароль мурунтан коюлган";err.style.display="block";return;}
+    data.auth={hash:hashStr(p1)};role="owner";teacher=true;doSave();closeModal();view={page:"tlessons"};render();}else{const h=hashStr(p1);
+    if(h===data.auth?.hash){role="owner";teacher=true;closeModal();view={page:"tlessons"};tview="lessons";render();}
+    else if(data.auth?.helpHash&&h===data.auth.helpHash){role="help";teacher=true;closeModal();view={page:"tlessons"};tview="lessons";render();}
+    else{err.textContent="Пароль туура эмес";err.style.display="block";}}};
+}
+async function enableBio(){if(role==="help"){alert("Манжа изи владелецке гана");return;}if(!window.PublicKeyCredential){alert("Бул түзмөктө биометрия жок");return;}try{const cred=await navigator.credentials.create({publicKey:{challenge:crypto.getRandomValues(new Uint8Array(16)),rp:{name:"Ustaz Platform"},user:{id:crypto.getRandomValues(new Uint8Array(16)),name:"ustaz",displayName:"Устаз"},pubKeyCredParams:[{alg:-7,type:"public-key"},{alg:-257,type:"public-key"}],authenticatorSelection:{authenticatorAttachment:"platform",userVerification:"required"},timeout:30000}});localStorage.setItem("plat_bio",btoa(String.fromCharCode(...new Uint8Array(cred.rawId))));localStorage.setItem("plat_bio_role","owner");alert("Даяр! Эми бул түзмөктөн манжа изи менен кире аласыз.");}catch(e){alert("Орнотулган жок: "+e.message);}}
+
+/* рендер */
+function render(){
+  document.body.classList.toggle("lessonfix",view.page==="lesson");
+  if(view.page!=="lesson")document.body.classList.remove("reading");
+  const sy=window.scrollY;
+  qs("#teacherBtn").textContent=teacher?"Чыгуу":"Мугалим";
+  qs("#teacherBtn").className=teacher?"btn sm":"btn sm g";
+  qs("#teacherBtn").style.display=teacher?"":"none";
+  if(!ready){app.innerHTML=`<p class="center muted" style="margin-top:40px;">Жүктөлүүдө…</p>`;return;}
+  if(view.page==="home")renderHome();
+  else if(view.page==="lesson")renderLesson(false);
+  else if(view.page==="tlessons")renderTLessons();
+  else if(view.page==="edit")renderLesson(true);
+  else if(view.page==="test")renderTest();
+  else if(view.page==="vtest")renderVTest();
+  else if(view.page==="place")renderPlace();
+  requestAnimationFrame(()=>window.scrollTo(0,sy));
+}
+function lessonsSorted(){return Object.entries(data.lessons||{}).map(([id,l])=>({id,...l})).sort((a,b)=>(a.order||0)-(b.order||0));}
+
+function renderHome(){
+  const ls=lessonsSorted();
+  app.innerHTML=`${ustazBlock()}
+  ${aboutHTML()}
+  ${!teacher&&!localStorage.getItem("plat_placed")?`<div class="lcard" id="plGo" style="border-style:dashed;"><span class="lnum" style="font-size:1.4rem;">?</span><span class="grow"><b>${esc(T("placeTitle"))}</b><br/><span class="muted">${esc(T("placeHint"))}</span></span><span style="color:var(--soft);">›</span></div>`:""}
+  ${!teacher&&T("stepsOn")==="1"?`<div class="steps"><div class="st"><i>1</i><span>${esc(T("step1"))}</span></div><div class="st"><i>2</i><span>${esc(T("step2"))}</span></div><div class="st"><i>3</i><span>${esc(T("step3"))}</span></div></div>`:""}
+  <div class="card"><div class="row"><b class="grow" style="font-size:1.1rem;">${esc(T("lessonsTitle"))}</b>${student&&!teacher?`<button class="btn sm g" id="myB">Менин окуум</button>`:""}${student&&!teacher?`<button class="btn sm r" id="loB">Чыгуу</button>`:""}</div><div class="mt" id="lsList"><p class="muted">Жүктөлүүдө…</p></div></div>`;
+  qs("#plGo")?.addEventListener("click",()=>{const go=()=>{view={page:"place"};render();};student?go():askStudentName(go);});
+  qs("#myB")?.addEventListener("click",openMyProgress);
+  qs("#loB")?.addEventListener("click",()=>{if(confirm("Аккаунттан чыгасызбы?"))studentLogout();});
+  if(student&&qs("#plGo")){get(ref(db,`${ROOT}/placement/${skey(student)}`)).then(s=>{if(s.exists()){localStorage.setItem("plat_placed","1");qs("#plGo")?.remove();}}).catch(()=>{});}
+  populateHome(ls);
+}
+async function populateHome(ls){
+  const box=qs("#lsList");if(!box)return;
+  const openCount=Math.max(1,+(data.access?.openCount??1));
+  let grants={},prog={};
+  if(student&&!teacher){
+    try{const g=await get(ref(db,`${ROOT}/grants/${skey(student)}`));grants=g.exists()?g.val():{};}catch(e){}
+    // пароль коюлган болсо — ушул түзмөктөгү пароль дал келгенде гана доступ берилет
+    if(grants.pass&&localStorage.getItem("plat_pass")!==String(grants.pass).toUpperCase())grants={};
+    prog=await myProgress();
+  }
+  if(!qs("#lsList"))return;
+  let prevPassed=true;
+  box.innerHTML=ls.length?ls.map((l,idx)=>{
+    const st=prog?.[l.id]||null;
+    const s=lset(l);
+    const passed=passScore(st,s).passed;
+    // Устаз ачып берген сабактар тестсиз эле дароо ачылат
+    const byGrant=grants.active!==false&&(grants.all||grants[l.id]||(grants.upto!=null&&idx<=+grants.upto));
+    const granted=teacher||idx<openCount||byGrant;
+    const progOk=teacher||idx===0||prevPassed||byGrant;
+    const open=granted&&progOk;
+    const need=idx>0?lset(ls[idx-1]).pass:0;
+    const row=`<div class="lcard ${open?"":"lock-li"} ${passed?"done":""}" data-l="${l.id}" data-lock="${open?"":(granted?"prog":"pay")}" data-need="${need}"><span class="lnum">${passed?"✓":idx+1}</span><span class="grow"><b>${esc(l.name)}</b><span class="muted">${open?`${(l.tokens||[]).filter(t=>!t.off).length} тамга-сөз${l.vid?" · видео":""}${passed?" · өткөнсүз":""}`:(granted?esc(T("lockProg")):esc(T("lockPay")))}</span></span><span style="color:var(--soft);font-size:1.3rem;">›</span></div>`;
+    prevPassed=passed;
+    return row;
+  }).join(""):`<p class="muted center" style="padding:18px 0;">${esc(T("emptyLessons"))}</p>`;
+  box.querySelectorAll("[data-l]").forEach(el=>el.onclick=()=>{
+    if(!student&&!teacher){askStudentName(()=>render());return;}
+    if(el.dataset.lock==="pay"){lockModal(el.dataset.l);return;}
+    if(el.dataset.lock==="prog"){openModal(`<h3>Сабак азырынча жабык</h3><p class="muted mt">Бул сабак ачылышы үчүн мурунку сабактын тапшырмасынан кеми ${el.dataset.need}% алышыңыз керек. Тестти кайра тапшырыңыз же Устаздан ачып берүүнү сураңыз.</p><button class="btn g mt" style="width:100%;" id="lc">Түшүндүм</button>`);qs("#lc").onclick=closeModal;return;}
+    if(ls[0]&&el.dataset.l===ls[0].id)metric("lesson1");
+    dropVid();vidMini=false;vidHide=false;view={page:"lesson",lid:el.dataset.l};render();
+  });
+}
+/* Окуучунун жеке панели — баскыч менен ачылат */
+async function openMyProgress(){
+  if(!student)return;
+  openModal(`<div class="recwide"><h3>Менин окуум</h3><div id="myProgBody"><p class="muted mt">Жүктөлүүдө…</p></div></div>`);
+  const ls=lessonsSorted();
+  const prog=await myProgress();
+  const rows=ls.map((l,i)=>({l,i,r:prog?.[l.id]})).filter(x=>x.r);
+  const box2=qs("#myProgBody");if(!box2)return;
+  if(!rows.length){box2.innerHTML=`<p class="muted mt">Азырынча маалымат жок — биринчи сабакты баштаңыз!</p>`;return;}
+  box2.innerHTML=`
+  <p class="muted" style="margin:4px 0 0;">Жалпы жыйынтык = Үй окуусу 30% + Таануу 30% + Айтуу 40%</p>
+  ${rows.map(({l,i,r})=>{
+    const s=lset(l);const ps=passScore(r,s);
+    const mist=r.mist?Object.keys(r.mist):[];
+    return`<div class="stcard"><div class="row"><b class="grow">${i+1}. ${esc(l.name)}</b>${ps.mark!=null?`<span class="badge on">Баа: ${ps.mark}</span>`:""}${ps.passed?'<span class="badge on">✓ өттүм</span>':'<span class="badge off">окуп жатам</span>'}</div><div class="prog" style="margin-top:8px;"><span class="chip">Үй окуусу <b>${ps.home}%</b></span><span class="chip">Таануу <b>${ps.rec}%</b></span><span class="chip">Айтуу <b>${ps.g!=null?ps.g+"%":"текшерилүүдө"}</b></span><span class="chip tot">Жалпы жыйынтык <b>${ps.fin!=null?ps.fin+"%":"—"} / ${s.pass}%</b></span></div>
+    ${mist.length?`<p class="muted" style="margin-top:8px;font-size:0.78rem;line-height:2;">Оңдой турган тамгаларым: ${mist.map(a=>`<span dir="rtl" style="font-family:'Scheherazade New';font-size:1.2rem;padding:1px 8px;border-radius:8px;${r.mist[a].lv===2?"background:var(--blue);color:#fff;":"box-shadow:inset 0 0 0 2px var(--blue);"}">${esc(a)}</span>`).join(" ")}<br/>Сабакты ачып, тамганы кармап туруп Устаздын оңдоосун угуңуз</p>`:""}
+  </div>`;}).join("")}`;
+}
+/* ДЕҢГЭЭЛ АНЫКТОО: бардык сабактар боюнча кыска тест (таануу + үн жазуу) */
+let place=null;
+function renderPlace(){
+  const ls=lessonsSorted().filter(l=>(l.tokens||[]).filter(t=>t.ar&&!t.off).length>=2);
+  if(!ls.length){app.innerHTML=`<p class="center muted mt">Сабактар даяр эмес</p>`;return;}
+  if(!place){
+    // ар сабактан 2 суроо; 2 ката болгондо токтойбуз
+    const qs2=[];
+    ls.forEach((l,li)=>{
+      const pool=shuffle((l.tokens||[]).filter(t=>t.ar&&!t.off)).slice(0,2);
+      pool.forEach(item=>{
+        const wrong=shuffle((l.tokens||[]).filter(t=>t.ar&&t.ar!==item.ar)).slice(0,3);
+        while(wrong.length<3){const all=Object.values(data.lessons).flatMap(x=>x.tokens||[]).filter(t=>t.ar&&t.ar!==item.ar);wrong.push(all[Math.floor(Math.random()*all.length)]);}
+        qs2.push({li,item,opts:shuffle([item,...wrong.slice(0,3)])});
+      });
+    });
+    place={qs:qs2,i:0,errs:0,errLesson:null,qlog:[],t0:Date.now(),rec:null,chunks:[],stream:null,lock:false};
+    micStream().then(stream=>{
+      if(!place||!stream)return;
+      try{const _ch=place.chunks;const m=recMime();place.rec=new MediaRecorder(stream,m?{mimeType:m}:undefined);place.stream=stream;place.rec.ondataavailable=e=>{if(e.data.size)_ch.push(e.data);};place.rec.start(500);}catch(e){}
+    }).catch(()=>{});
+  }
+  const q=place.qs[place.i];
+  const finished=!q||place.errs>=2;
+  if(finished){finishPlace(ls);return;}
+  if(!place.qlog.some(x=>x.i===place.i))place.qlog.push({i:place.i,ar:q.item.ar,t:Math.round((Date.now()-place.t0)/1000),ok:false});
+  app.innerHTML=`<div class="row mt"><button class="btn sm g" id="pb">← Чыгуу</button><span class="grow center muted">Деңгээл аныктоо · ${place.i+1}/${place.qs.length}</span></div><div class="card center"><p class="muted" style="margin-bottom:8px;">Угуп, туура жазылганын табыңыз — анан <b>үн чыгарып окуп коюңуз</b> </p><button class="btn" id="hear">Кайра угуу</button><div class="mt">${q.opts.map((o,i2)=>`<button class="opt" data-i="${i2}" style="font-family:${o.font||FONTS[0][0]};">${esc(o.ar)}</button>`).join("")}</div></div>`;
+  qs("#pb").onclick=()=>{stopPlace();view={page:"home"};render();};
+  qs("#hear").onclick=()=>playTok(q.item);
+  playTok(q.item);
+  app.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+    if(place.lock)return;place.lock=true;
+    const ok=q.opts[+b.dataset.i]===q.item;
+    const le=place.qlog.find(x=>x.i===place.i);if(le)le.ok=ok;
+    if(ok)b.classList.add("ok");
+    else{b.classList.add("no");place.errs++;if(place.errLesson==null)place.errLesson=q.li;}
+    setTimeout(()=>{place.i++;place.lock=false;render();},1000);
+  });
+}
+function stopPlace(){if(!place)return;try{if(place.rec&&place.rec.state!=="inactive")place.rec.stop();}catch(e){}place.stream?.getTracks().forEach(t=>t.stop());place=null;}
+async function finishPlace(ls){
+  const pl=place;place=null;
+  localStorage.setItem("plat_placed","1");
+  const sugIdx=pl.errLesson!=null?pl.errLesson:Math.min(ls.length-1,(pl.qs[pl.qs.length-1]?.li??0)+1);
+  const sug=ls[Math.max(0,sugIdx)];
+  const allIdx=lessonsSorted().findIndex(l=>l.id===sug.id);
+  const okCnt=pl.qlog.filter(x=>x.ok).length;
+  app.innerHTML=`<div class="card center mt"><p style="font-size:1.3rem;"><b>Деңгээлиңиз аныкталды!</b></p><p class="mt" style="font-size:1.05rem;">Сунушубуз: <b style="color:var(--em-d);">«${esc(sug.name)}»</b> (${allIdx+1}-сабак) сабагынан баштасаңыз болот</p><p class="muted mt">Туура жооптор: ${okCnt}/${pl.qlog.length} · Үн жазууңуз Устазга жөнөтүлдү — ал угуп, доступ бергенде так ушул деңгээлден ачып берет.</p><p class="muted mt" id="plUp"></p><div class="row mt" style="justify-content:center;"><button class="btn" id="plReg">Курска каттоо</button><button class="btn g" id="plHome">Башкы бет</button></div></div>`;
+  qs("#plHome").onclick=()=>{view={page:"home"};render();};
+  qs("#plReg").onclick=()=>{view={page:"home"};render();lockModal(sug.id);};
+  const meta={name:student||"?",ts:Date.now(),suggest:allIdx,suggestName:`${allIdx+1}-сабак · ${sug.name}`,ok:okCnt,total:pl.qlog.length,qlog:pl.qlog.map(x=>({ar:x.ar,t:x.t,ok:!!x.ok}))};
+  const fin=async()=>{
+    pl.stream?.getTracks().forEach(t=>t.stop());
+    if(student&&pl.chunks.length){
+      try{
+        const mt=pl.rec?.mimeType||recMime()||"audio/webm";
+        const blob=new Blob(pl.chunks,{type:mt});
+        const task=uploadBytesResumable(sref(storage,`recordings/placement/${skey(student)}/${uid()}.${recExt(mt)}`),blob,{contentType:mt});
+        await new Promise((r2,j2)=>task.on("state_changed",null,j2,r2));
+        meta.url=await getDownloadURL(task.snapshot.ref);
+      }catch(e){}
+    }
+    if(student)set(ref(db,`${ROOT}/placement/${skey(student)}`),meta).catch(()=>{});
+    const u=qs("#plUp");if(u)u.textContent=meta.url?"Үн жазуу Устазга жетти":"";
+  };
+  if(pl.rec&&pl.rec.state!=="inactive"){pl.rec.onstop=fin;pl.rec.stop();}else fin();
+}
+/* Сабак окуучуга ачыкпы? (акы + мурункудан өтүү) */
+async function lessonOpenFor(i,ls){
+  if(teacher)return true;
+  const l=ls[i];const openCount=Math.max(1,+(data.access?.openCount??1));
+  let grants={};
+  if(student){try{const g=await get(ref(db,`${ROOT}/grants/${skey(student)}`));grants=g.exists()?g.val():{};}catch(e){}}
+  const granted=i<openCount||(grants.active!==false&&(grants.all||grants[l.id]||(grants.upto!=null&&i<=+grants.upto)));
+  if(!granted)return false;
+  if(i===0)return true;
+  if(!student)return false;
+  const prev=ls[i-1];
+  try{const s2=await get(ref(db,`${ROOT}/stats/${prev.id}/${skey(student)}`));return passScore(s2.exists()?s2.val():null,lset(prev)).passed;}catch(e){return false;}
+}
+/* Кол менен барактоо: солго/оңго сүрүү */
+async function swipeLesson(dir){
+  const ls=lessonsSorted();const i=ls.findIndex(l=>l.id===view.lid);const j=i+dir;
+  if(j<0||j>=ls.length)return;
+  const ok=await lessonOpenFor(j,ls);
+  stopHomeRead();dropVid();vidMini=false;vidHide=false;sel=null;multi=[];
+  view={page:"lesson",lid:ls[j].id,locked:!ok};render();
+}
+/* Китеп ичинен кийинки сабакка өтүү */
+async function gotoNext(){
+  const ls=lessonsSorted();const i=ls.findIndex(l=>l.id===view.lid);
+  if(i<0)return;
+  if(i+1>=ls.length){openModal(`<h3></h3><p class="mt">Бул азырынча акыркы сабак. Азаматсыз!</p><button class="btn g mt" style="width:100%;" id="nc">Жабуу</button>`);qs("#nc").onclick=closeModal;return;}
+  const nxt=ls[i+1];
+  if(teacher){dropVid();vidMini=false;vidHide=false;view={page:"lesson",lid:nxt.id};render();return;}
+  const s=lset(ls[i]);
+  const st=await loadStats(view.lid);
+  const ps=passScore(st,s);
+  if(!ps.passed){openModal(`<h3>Кийинки сабак жабык</h3><p class="muted mt">Жалпы жыйынтык = Үй окуусу 30% + Таануу 30% + Айтуу (Устаздын баасы) 40%, кеми ${s.pass}% болушу керек.<br/>Азыр: Үй ${ps.home}% · Таануу ${ps.rec}% · Айтуу ${ps.g!=null?ps.g+"%":"коё элек"} · <b>Жалпы ${ps.fin!=null?ps.fin+"%":"—"}</b></p><button class="btn g mt" style="width:100%;" id="nc">Түшүндүм</button>`);qs("#nc").onclick=closeModal;return;}
+  const openCount=Math.max(1,+(data.access?.openCount??1));
+  let grants={};
+  if(student){try{const g=await get(ref(db,`${ROOT}/grants/${skey(student)}`));grants=g.exists()?g.val():{};}catch(e){}}
+  const granted=(i+1)<openCount||(grants.active!==false&&(grants.all||grants[nxt.id]||(grants.upto!=null&&(i+1)<=+grants.upto)));
+  if(!granted){lockModal(nxt.id);return;}
+  if(student)update(ref(db,`${ROOT}/stats/${view.lid}/${skey(student)}`),{mist:null}).catch(()=>{}); // өткөндө каталар тазаланат
+  dropVid();vidMini=false;vidHide=false;view={page:"lesson",lid:nxt.id};render();
+}
+/* жабык сабак: пароль менен кирүү же анкета -> Устаздын WhatsApp'ы */
+function lockModal(lid){
+  const L=data.lessons[lid];if(!L)return;
+  const wa=(data.profile?.wa||"").replace(/[^0-9]/g,"");
+  openModal(`<h3>${esc(L.name)}</h3><p class="muted mt">Бул сабак жабык. Ачуунун эки жолу бар:</p><div class="card"><b>1. Пароль менен кирүү</b><p class="muted" style="margin:4px 0 8px;">Устаз берген жеке паролуңузду жазыңыз:</p><input id="pwN" placeholder="Аты-жөнүңүз" value="${esc(student||"")}"/><div class="row mt"><input id="pwIn" placeholder="Пароль" style="text-transform:uppercase;flex:1;"/><button class="btn" id="pwGo">Кирүү</button></div><p class="muted" id="pwErr" style="color:var(--red);display:none;margin-top:6px;"></p></div><div class="card" style="border-color:var(--blue);"><b>2. Курска каттоо</b>
+  ${data.price?`<p style="margin:8px 0 0;font-size:1.05rem;">Курстун баасы: <b style="color:var(--em-d);">${esc(data.price)}</b></p>`:""}
+  ${data.regText?`<div style="background:color-mix(in srgb,var(--em) 8%,transparent);border-radius:12px;padding:12px;margin:8px 0;white-space:pre-line;font-size:0.85rem;line-height:1.65;">${esc(data.regText)}</div>`:""}
+  ${data.profile?.wa?`<p class="muted" style="margin:4px 0 8px;">Устаздын WhatsApp номери: <a class="wa" href="https://wa.me/${esc(data.profile.wa)}" target="_blank">+${esc(data.profile.wa)}</a></p>`:""}
+  <input id="rqN" placeholder="Аты-жөнүңүз" value="${esc(student||"")}"/><input id="rqP" class="mt" placeholder="Өз WhatsApp номериңиз (996700123456)"/><p class="muted mt" style="font-weight:600;">Төлөм боюнча тандаңыз:</p><label class="row mt" style="gap:8px;cursor:pointer;align-items:flex-start;"><input type="radio" name="payv" value="paid" checked style="width:auto;margin-top:3px;"/><span style="font-size:0.85rem;">Акчаны котордум — чек/сумманы жазам</span></label><input id="rqC" class="mt" placeholder="Чек № / которгон сумма"/><label class="row mt" style="gap:8px;cursor:pointer;align-items:flex-start;"><input type="radio" name="payv" value="later" style="width:auto;margin-top:3px;"/><span style="font-size:0.85rem;">Устаз байланышсын — сүйлөшүп, анан которөм</span></label><button class="btn mt" style="width:100%;" id="rqOk">Жөнөтүү жана WhatsApp'ка өтүү</button><p class="muted" id="rqMsg" style="display:none;margin-top:6px;"></p></div><button class="btn g mt" style="width:100%;" id="lkC">Жабуу</button>`);
+  qs("#lkC").onclick=closeModal;
+  qs("#pwGo").onclick=async()=>{
+    const n=qs("#pwN").value.trim();const pw=qs("#pwIn").value.trim().toUpperCase();const err=qs("#pwErr");
+    if(!n||!pw){err.textContent="Аты жана пароль керек";err.style.display="block";return;}
+    try{
+      const s=await get(ref(db,`${ROOT}/grants/${skey(n)}`));
+      if(!s.exists()){err.textContent="Мындай окуучу катталган эмес";err.style.display="block";return;}
+      const g=s.val();
+      if((g.pass||"").toUpperCase()!==pw){err.textContent="Пароль туура эмес";err.style.display="block";return;}
+      if(g.active===false){err.textContent="Доступуңуз убактылуу токтотулган — Устазга кайрылыңыз";err.style.display="block";return;}
+      student=n;localStorage.setItem("plat_student",n);
+      closeModal();render();
+    }catch(e){err.textContent="Ката: интернетти текшериңиз";err.style.display="block";}
+  };
+  qs("#rqOk").onclick=async()=>{
+    const n=qs("#rqN").value.trim(),ph=qs("#rqP").value.trim(),c=qs("#rqC").value.trim();const m=qs("#rqMsg");
+    if(!n||!ph){m.textContent="Аты жана номер милдеттүү";m.style.color="var(--red)";m.style.display="block";return;}
+    if(!student){student=n;localStorage.setItem("plat_student",n);}
+    const pv=(document.querySelector("input[name=payv]:checked")||{}).value||"paid";
+    try{
+      let plc=null;try{const pl=await get(ref(db,`${ROOT}/placement/${skey(n)}`));if(pl.exists())plc=pl.val();}catch(e){}
+      await set(ref(db,`${ROOT}/requests/${skey(n)}`),{name:n,phone:ph,note:pv==="paid"?(c||"чек жазылган жок"):"кийин которөт — байланышуу керек",pay:pv,lid,lname:L.name,ts:Date.now()});
+      m.style.color="var(--em-d)";m.textContent="Билдирүүңүз Устазга жетти.";m.style.display="block";
+      if(wa){
+        const lvl=plc?` Деңгээл сунушум: ${plc.suggestName||""}.`:"";
+        const txt=encodeURIComponent(pv==="paid"
+          ?`Ассалому алейкум, Устаз! Мен ${n}. «${L.name}» сабагына каттолгум келет. Номерим: ${ph}. Төлөм: ${c||"чекти жөнөтөм"}.${lvl}`
+          :`Ассалому алейкум, Устаз! Мен ${n}. Курска каттолгум келет, төлөм боюнча сүйлөшөлү. Номерим: ${ph}.${lvl}`);
+        window.open(`https://wa.me/${wa}?text=${txt}`,"_blank");
+      }
+    }catch(e){m.textContent="Жөнөтүлгөн жок — интернетти текшериңиз";m.style.color="var(--red)";m.style.display="block";}
+  };
+}
+
+function renderTLessons(){
+  const own=role!=="help";
+  if(!own&&["access","profile"].includes(tview))tview="lessons";
+  app.innerHTML=`${ustazBlock()}
+  ${own?"":`<p class="muted" style="margin-top:8px;">Жардамчы режими — Доступ, Профиль жана Пароль бөлүмдөрү жабык</p>`}
+  <div class="tabs"><button class="${tview==="lessons"?"on":""}" data-tv="lessons">Сабактар</button><button class="${tview==="stats"?"on":""}" data-tv="stats">Статистика</button><button class="${tview==="journal"?"on":""}" data-tv="journal">Журнал</button>
+    ${own?`<button class="${tview==="access"?"on":""}" data-tv="access">Доступ</button>`:""}
+    <button class="${tview==="settings"?"on":""}" data-tv="settings">Жөндөөлөр</button><button class="${tview==="texts"?"on":""}" data-tv="texts">Тексттер</button>
+    ${own?`<button class="${tview==="profile"?"on":""}" data-tv="profile">Профиль</button><button data-tv="pw">Пароль</button>`:""}
+  </div><div id="tbody"></div>`;
+  app.querySelectorAll("[data-tv]").forEach(b=>b.onclick=()=>{if(b.dataset.tv==="pw"){pwChange();return;}tview=b.dataset.tv;render();});
+  const box=qs("#tbody");
+  if(tview==="lessons")drawTLessons(box);
+  else if(tview==="stats")drawTStats(box);
+  else if(tview==="journal")drawTJournal(box);
+  else if(tview==="access")drawAccess(box);
+  else if(tview==="texts")drawTexts(box);
+  else if(tview==="settings")drawTSettings(box);
+  else if(tview==="profile")drawTProfile(box);
+}
+/* Сабактарды жасоо: түзүү, иреттөө, видео, жөндөө */
+function drawTLessons(box){
+  const ls=lessonsSorted();
+  box.innerHTML=`<div class="card"><div class="row"><b class="grow">Сабактарды жасоо</b><button class="btn sm" id="addL">+ Жаңы сабак</button>${role!=="help"?`<button class="btn sm g" id="bio">Манжа изи</button>`:""}</div><div class="mt">${ls.length?ls.map((l,idx)=>`<div class="lesson-li"><span style="display:flex;flex-direction:column;gap:2px;"><button class="btn sm g" data-up="${l.id}" ${idx===0?"disabled":""} style="padding:1px 7px;">▲</button><button class="btn sm g" data-dn="${l.id}" ${idx===ls.length-1?"disabled":""} style="padding:1px 7px;">▼</button></span><span class="grow" data-open="${l.id}" style="cursor:pointer;">${idx+1}. ${esc(l.name)} <span class="muted">· ${(l.tokens||[]).length} эл. ${l.vid?"":""} ${l.lock?"":""}</span></span><button class="btn sm g" data-vid="${l.id}"></button><button class="btn sm g" data-cfg="${l.id}"></button><button class="btn sm g" data-rn="${l.id}">аты</button><button class="btn sm r" data-del="${l.id}">✕</button></div>`).join(""):`<p class="muted">Биринчи сабагыңызды түзүңүз</p>`}</div><p class="muted mt">▲▼ — сабактардын катарын алмаштыруу · — ушул сабакка өзгөчө лимиттер (жалпы лимиттер «Жөндөөлөр» бөлүмүндө)</p></div>`;
+  qs("#bio")&&(qs("#bio").onclick=enableBio);
+  qs("#addL").onclick=()=>{openModal(`<h3>Жаңы сабак</h3><input id="ln" class="mt" placeholder="Сабактын аты"/><button class="btn mt" style="width:100%;" id="lok">Түзүү</button>`);qs("#lok").onclick=()=>{const n=qs("#ln").value.trim();if(!n)return;const id=uid();const mx=Math.max(0,...lessonsSorted().map(x=>x.order||0));data.lessons[id]={name:n,order:mx+1,tokens:[]};scheduleSave();closeModal();view={page:"edit",lid:id};undoStack=[];redoStack=[];render();};};
+  box.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>{view={page:"edit",lid:b.dataset.open};undoStack=[];redoStack=[];sel=null;multi=[];render();});
+  box.querySelectorAll("[data-vid]").forEach(b=>b.onclick=()=>vidModal(b.dataset.vid));
+  box.querySelectorAll("[data-rn]").forEach(b=>b.onclick=()=>{const l=data.lessons[b.dataset.rn];const v=prompt("Жаңы аты:",l.name);if(v){l.name=v.trim();scheduleSave();render();}});
+  box.querySelectorAll("[data-cfg]").forEach(b=>b.onclick=()=>lessonSettings(b.dataset.cfg));
+  const swap=(id,dir)=>{const arr=lessonsSorted();const i=arr.findIndex(x=>x.id===id);const j=i+dir;if(j<0||j>=arr.length)return;arr.forEach((x,k)=>data.lessons[x.id].order=k+1);const a=data.lessons[arr[i].id],b2=data.lessons[arr[j].id];const t=a.order;a.order=b2.order;b2.order=t;scheduleSave();render();};
+  box.querySelectorAll("[data-up]").forEach(b=>b.onclick=()=>swap(b.dataset.up,-1));
+  box.querySelectorAll("[data-dn]").forEach(b=>b.onclick=()=>swap(b.dataset.dn,1));
+  box.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{openModal(`<h3>Сабакты өчүрүү?</h3><p class="muted mt">Кайтарылбайт.</p><div class="row mt"><button class="btn r grow" id="dok">Өчүрүү</button><button class="btn g" id="dc">Жок</button></div>`);qs("#dc").onclick=closeModal;qs("#dok").onclick=()=>{delete data.lessons[b.dataset.del];scheduleSave();closeModal();render();};});
+}
+/* Жалпы статистика: ар бир окуучу, Устаз койгон лимиттерге салыштырмалуу пайыздар */
+async function drawTStats(box){
+  const ls=lessonsSorted();
+  box.innerHTML=`<div class="card"><div class="row"><b class="grow">Статистика</b><select id="stL" style="max-width:220px;">${ls.map(l=>`<option value="${l.id}">${esc(l.name)}</option>`).join("")}</select></div><div class="mt" id="stOut"><p class="muted">Жүктөлүүдө…</p></div><p class="muted mt">Пайыздар Сиз койгон лимиттерге карата эсептелет: Үй окуусу = аткарган окуу / лимит · Тест = эң жакшы жыйынтык / өтүү босогосу менен салыштырылат · Баа — Сиз диктофонду угуп койгон баа. «угуу» баскычы менен окуучунун бардык үн жазууларын (үй окуусу + тест) угуп, баа коёсуз.</p></div>`;
+  const sel=qs("#stL");
+  const draw=async()=>{
+    const lid=sel.value;if(!lid){qs("#stOut").innerHTML=`<p class="muted">Сабак жок</p>`;return;}
+    const s=lset(data.lessons[lid]||{});
+    let st={};try{const x=await get(ref(db,`${ROOT}/stats/${lid}`));st=x.exists()?x.val():{};}catch(e){}
+    const out=qs("#stOut");if(!out)return;
+    const rows=Object.entries(st);
+    out.innerHTML=rows.length?`<div style="overflow-x:auto;"><table><tr><th style="text-align:left;">Окуучу</th><th>Үй окуу</th><th>Угуу</th><th>Таануу</th><th>Айтуу</th><th>Σ Жалпы</th><th>Баа</th><th>Жыйынтык</th><th></th><th></th></tr>${rows.map(([k,r])=>{
+      const homePct=Math.min(100,Math.round((r.reads||0)/s.home*100));
+      const ps=passScore(r,s);
+      return`<tr><td class="nm">${esc(r.name)}</td><td>${r.reads||0}/${s.home} <b style="color:${homePct>=100?"var(--em-d)":"var(--red)"};">${homePct}%</b></td><td>${r.listens||0}</td><td><b style="color:${ps.rec>=s.pass?"var(--em-d)":"var(--red)"};">${ps.rec}%</b></td><td>${ps.g!=null?`<b>${ps.g}%</b>`:"—"}</td><td>${ps.fin!=null?`<b style="color:${ps.fin>=s.pass?"var(--em-d)":"var(--red)"};">${ps.fin}%</b>`:"—"}/${s.pass}%</td><td>${ps.mark!=null?`<b style="color:var(--em-d);font-size:1.05rem;">${ps.mark}</b>`:"—"}</td><td>${ps.passed?'<span class="badge on">✓ өттү</span>':'<span class="badge off">өтө элек</span>'}</td><td><button class="btn sm g" data-rec="${k}">угуу</button></td><td><button class="btn sm r" data-delst="${k}">✕</button></td></tr>`;}).join("")}</table></div>`:`<p class="muted">Бул сабак боюнча маалымат жок</p>`;
+    out.querySelectorAll("[data-rec]").forEach(b=>b.onclick=()=>openRecsModal(lid,b.dataset.rec,st[b.dataset.rec]?.name||b.dataset.rec));
+    out.querySelectorAll("[data-delst]").forEach(b=>b.onclick=async()=>{if(!confirm("Бул окуучунун ушул сабактагы маалыматын өчүрөсүзбү?"))return;await set(ref(db,`${ROOT}/stats/${lid}/${b.dataset.delst}`),null).catch(()=>{});await set(ref(db,`${ROOT}/recs/${lid}/${b.dataset.delst}`),null).catch(()=>{});draw();});
+  };
+  sel.onchange=draw;draw();
+}
+/* Баалар журналы: бардык окуучулардын баалары бир жерде */
+async function drawTJournal(box){
+  const ls=lessonsSorted();
+  box.innerHTML=`<div class="card"><b>Баалар журналы</b><p class="muted" style="margin:4px 0 8px;">Диктофонду угуп Сиз койгон баалар. Баа коё элек болсоңуз: ✓ — сабактан өткөн, · — иштеп жатат, — маалымат жок.</p><div id="jOut"><p class="muted">Жүктөлүүдө…</p></div><p class="muted mt">${ls.map((l,i)=>`<b>${i+1}</b> — ${esc(l.name)}`).join(" · ")||"Сабак жок"}</p></div>`;
+  let statsAll={};try{const s=await get(ref(db,`${ROOT}/stats`));statsAll=s.exists()?s.val():{};}catch(e){}
+  const out=qs("#jOut");if(!out)return;
+  const students={};
+  ls.forEach(l=>{Object.entries(statsAll?.[l.id]||{}).forEach(([sk,r])=>{(students[sk]=students[sk]||{name:r.name||sk,g:{}}).g[l.id]=r;});});
+  const rows=Object.entries(students).sort((a,b)=>String(a[1].name).localeCompare(String(b[1].name)));
+  out.innerHTML=rows.length?`<div style="overflow-x:auto;"><table><tr><th style="text-align:left;">Окуучу</th>${ls.map((l,i)=>`<th title="${esc(l.name)}">${i+1}</th>`).join("")}<th>Орточо</th><th></th></tr>
+  ${rows.map(([sk,st])=>{
+    let sum=0,cnt=0;
+    const cells=ls.map(l=>{const r=st.g[l.id];if(!r)return"<td>—</td>";
+      const ps=passScore(r,lset(l));
+      if(ps.mark!=null){sum+=ps.mark;cnt++;return`<td><b style="font-size:1.05rem;${ps.mark>=4?"color:#fff;background:var(--blue);":ps.mark>=3?"color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue);":"color:var(--soft);"}padding:2px 9px;border-radius:8px;display:inline-block;">${ps.mark}</b></td>`;}
+      if(ps.fin!=null)return`<td><span class="muted">${ps.fin}%</span></td>`;
+      return`<td>${ps.passed?"✓":"·"}</td>`;}).join("");
+    return`<tr><td class="nm">${esc(st.name)}</td>${cells}<td>${cnt?`<b>${(sum/cnt).toFixed(1)}</b>`:"—"}</td><td><button class="btn sm r" data-delj="${sk}">✕</button></td></tr>`;
+  }).join("")}</table></div>`:`<p class="muted">Азырынча маалымат жок</p>`;
+  out.querySelectorAll("[data-delj]").forEach(b=>b.onclick=async()=>{
+    if(!confirm("Бул окуучунун БАРДЫК сабактардагы маалыматын (баалар, жазуулар) өчүрөсүзбү?"))return;
+    for(const l of ls){await set(ref(db,`${ROOT}/stats/${l.id}/${b.dataset.delj}`),null).catch(()=>{});await set(ref(db,`${ROOT}/recs/${l.id}/${b.dataset.delj}`),null).catch(()=>{});}
+    drawTJournal(box);
+  });
+}
+/* Жалпы жөндөөлөр: бардык сабактарга тиешелүү лимиттер */
+function drawTSettings(box){
+  const d=Object.assign({listen:5,pause:2,hints:3,pass:90,home:3,testQ:10,testVoice:1},data.defaults||{});
+  box.innerHTML=`<div class="card"><b>Жалпы лимиттер (бардык сабактарга)</b><p class="muted" style="margin:4px 0 0;">Бир сабакка өзгөчө лимит керек болсо — Сабактар бөлүмүндөгү баскычы менен өзгөртөсүз.</p><p class="muted mt">Угуу лимити — окуучу тамгаларды канча жолу басып уга алат:</p><input id="dLis" type="number" min="0" max="200" value="${d.listen}"/><p class="muted mt">Жардам (транскрипция) лимити:</p><input id="dHi" type="number" min="0" max="50" value="${d.hints}"/><p class="muted mt">Үй окуу лимити — канча жолу Устазды эрчип толук окуш керек:</p><input id="dHm" type="number" min="1" max="30" value="${d.home}"/><p class="muted mt">Тесттеги суроолордун саны:</p><input id="dTq" type="number" min="3" max="30" value="${d.testQ}"/><p class="muted mt">Айтуу тестинде ар тамгага канча секунд берилет:</p><input id="dSay" type="number" min="3" max="30" value="${d.say??7}"/><p class="muted mt">Устаздын оңдоосун канча жолу укканда белги өчөт:</p><input id="dFix" type="number" min="1" max="10" value="${d.fix??2}"/><p class="muted mt">Тестте окуучунун үнү жазылсынбы (Сиз угуп текшересиз):</p><select id="dTv"><option value="1" ${d.testVoice?"selected":""}>Ооба — үнү жазылып мага келсин</option><option value="0" ${d.testVoice?"":"selected"}>Жок — үнсүз тест</option></select><p class="muted mt">Өтүү босогосу (%) — кийинки сабак ачылышы үчүн:</p><input id="dPs" type="number" min="50" max="100" value="${d.pass}"/><button class="btn mt" style="width:100%;" id="dOk">Сактоо</button></div><div class="card"><b>Тамгалардын үнүн текшерүү</b><p class="muted" style="margin:4px 0 8px;">Мурда жазылган үндөр кээ бир телефондордо ойнобошу мүмкүн. Бул баскыч аларды бардык телефон түшүнгөн форматка (WAV) өткөрөт. Интернет күчтүү болгондо басыңыз, бир нече мүнөт кетиши мүмкүн.</p><button class="btn g" id="cvOk">Үндөрдү жаңылоо</button><p class="muted mt" id="cvSt"></p></div><div class="card"><b>Жазылган үндөр — бир жерде</b><p class="muted" style="margin:4px 0 8px;">Кайсы сабакта канча тамгага үн жазылганы. Бир басым менен өчүрө аласыз:</p><div id="audMg">${lessonsSorted().map((l,i)=>{const c=(l.tokens||[]).filter(t=>t.audio).length;return`<div class="row" style="padding:6px 0;border-bottom:1px dashed var(--line);"><span class="grow">${i+1}. ${esc(l.name)}</span><span class="muted">${c?`${c} үн`:"үн жок"}</span>${c?`<button class="btn sm r" data-adel="${l.id}">✕</button>`:""}</div>`;}).join("")}</div><button class="btn r mt" id="adelAll">БАРДЫК сабактардын үндөрүн өчүрүү</button></div>`;
+  box.querySelectorAll("[data-adel]").forEach(b=>b.onclick=()=>{
+    const l=data.lessons[b.dataset.adel];if(!l)return;
+    if(!confirm(`«${l.name}» сабагындагы бардык үндөрдү өчүрөсүзбү?`))return;
+    (l.tokens||[]).forEach(t=>{delete t.audio;});scheduleSave();render();
+  });
+  qs("#adelAll").onclick=()=>{
+    if(!confirm("БАРДЫК сабактардагы жазылган үндөрдүн баары өчөт. Кайтарылбайт. Улантабызбы?"))return;
+    if(!confirm("Так чечтиңизби? Баары өчөт."))return;
+    Object.values(data.lessons||{}).forEach(l=>(l.tokens||[]).forEach(t=>{delete t.audio;}));scheduleSave();render();
+  };
+  qs("#cvOk").onclick=async()=>{
+    const st=qs("#cvSt");const b=qs("#cvOk");b.disabled=true;
+    const jobs=[];
+    Object.entries(data.lessons||{}).forEach(([lid,L])=>(L.tokens||[]).forEach(t=>{if(t.audio&&t.audio.startsWith("data:"))jobs.push([lid,t]);}));
+    if(!jobs.length){if(st)st.textContent="Баары мурунтан туура форматта";b.disabled=false;return;}
+    let ok=0,bad=0;
+    for(let i=0;i<jobs.length;i++){
+      const [lid,t]=jobs[i];
+      if(st)st.textContent=`${i+1}/${jobs.length} өткөрүлүүдө…`;
+      try{
+        const res=await fetch(t.audio);const blob0=await res.blob();
+        let blob=await toWav(blob0,15),ext="wav",ct="audio/wav";
+        if(!blob){blob=blob0;ext=recExt(blob0.type);ct=blob0.type||"audio/webm";}
+        const task=uploadBytesResumable(sref(storage,`tokens/${lid}/${t.id}_${Date.now()}.${ext}`),blob,{contentType:ct});
+        await new Promise((r2,j2)=>task.on("state_changed",null,j2,r2));
+        t.audio=await getDownloadURL(task.snapshot.ref);ok++;
+      }catch(e){bad++;}
+    }
+    scheduleSave();
+    if(st)st.textContent=`${ok} үн жаңыланды${bad?` · ${bad} өткөн жок`:""}`;
+    b.disabled=false;
+  };
+  qs("#dOk").onclick=()=>{data.defaults={listen:+qs("#dLis").value||0,hints:+qs("#dHi").value||0,home:+qs("#dHm").value||1,testQ:+qs("#dTq").value||10,say:+qs("#dSay").value||7,fix:+qs("#dFix").value||2,testVoice:+qs("#dTv").value?1:0,pass:+qs("#dPs").value||90,pause:d.pause};scheduleSave();const b=qs("#dOk");b.textContent="Сакталды";setTimeout(()=>{const x=qs("#dOk");if(x)x.textContent="Сактоо";},1400);};
+}
+/* Профиль: фото, аты, өзү тууралуу, WhatsApp */
+function drawTProfile(box){
+  const pr=data.profile||{};
+  box.innerHTML=`<div class="card"><b>Профиль</b>
+  ${ustazBlock()}
+  <p class="muted mt">Аты (сайтта көрүнөт):</p><input id="prN" value="${esc(pr.pname||"")}" placeholder="Устаз Чыңгыз Торокулов"/><p class="muted mt">Өзүңүз тууралуу:</p><input id="prA" value="${esc(pr.about||"")}" placeholder="Куран окууну нөлдөн баштап үйрөтүү"/><p class="muted mt">WhatsApp номериңиз (окуучулар анкетадан кийин ушуга өтөт, мис. 996700123456):</p><input id="prW" value="${esc(pr.wa||"")}" placeholder="996700123456"/><p class="muted mt">«Биз тууралуу» — башкы бетте кооз таанытуу блогунда чыгат (бош калтырсаңыз көрүнбөйт):</p><textarea id="prAF" rows="6" placeholder="Өзүңүз, тажрыйбаңыз, окутуу ыкмаңыз тууралуу жазыңыз…">${esc(pr.aboutFull||"")}</textarea><p class="muted mt">Сүрөт:</p><div class="row"><label class="btn g sm" for="prPh" style="cursor:pointer;">Сүрөт тандоо</label><input type="file" id="prPh" accept="image/*" style="display:none;"/><span class="muted" id="prSt"></span></div><button class="btn mt" style="width:100%;" id="prOk">Сактоо</button></div>`;
+  qs("#prPh").onchange=e=>{
+    const f=e.target.files[0];if(!f)return;const st=qs("#prSt");if(st)st.textContent="Жүктөлүүдө…";
+    const ext=(f.name.split(".").pop()||"jpg").replace(/[^a-z0-9]/gi,"");
+    const task=uploadBytesResumable(sref(storage,`profile/photo_${Date.now()}.${ext}`),f);
+    task.on("state_changed",null,()=>{if(st)st.textContent="Ката: жүктөлгөн жок";},async()=>{const url=await getDownloadURL(task.snapshot.ref);data.profile=Object.assign({},data.profile,{photo:url});scheduleSave();if(st)st.textContent="Коюлду";render();});
+  };
+  qs("#prOk").onclick=()=>{data.profile=Object.assign({},data.profile,{pname:qs("#prN").value.trim(),about:qs("#prA").value.trim(),aboutFull:qs("#prAF").value.trim(),wa:qs("#prW").value.replace(/[^0-9]/g,"")});scheduleSave();const b=qs("#prOk");b.textContent="Сакталды";setTimeout(()=>{const x=qs("#prOk");if(x)x.textContent="Сактоо";},1400);};
+}
+/* Доступ: ачык сабактар, окуучулар (пароль, токтотуу), билдирүү-өтүнүчтөр */
+async function drawAccess(box){
+  const ls=lessonsSorted();
+  box.innerHTML=`
+  <div class="card"><b>Жалпыга ачык сабактар</b><p class="muted" style="margin:4px 0 8px;">Биринчи канча сабак баарына акысыз ачык болот:</p><div class="row"><input id="opN" type="number" min="1" max="99" value="${Math.max(1,+(data.access?.openCount??1))}" style="max-width:90px;"/><button class="btn" id="opOk">Сактоо</button></div></div><div class="card"><b>Каттоо шарттары</b><p class="muted" style="margin:4px 0 4px;">Курстун баасы (окуучуга көрүнөт):</p><input id="prcIn" value="${esc(data.price||"")}" placeholder="мис. 2000 сом / айына 500 сом"/><p class="muted" style="margin:10px 0 8px;">Шарттар, сунуштар, төлөм жолу:</p><textarea id="regTx" rows="4" placeholder="Мис: Толук курс — 2000 сом. Төлөм: МБанк 0700... Биринчи сабак акысыз!">${esc(data.regText||"")}</textarea><button class="btn mt" id="regOk">Сактоо</button></div><div class="card"><b>Билдирүүлөр — төлөм өтүнүчтөрү</b><p class="muted" style="margin:4px 0 8px;">Окуучу анкета толтурганда ушул жерге түшөт жана WhatsApp'ыңызга да жазат. Чекти текшерип, ачып бериңиз:</p><div id="rqList"><p class="muted">Жүктөлүүдө…</p></div></div><div class="card"><b>Сайтка кирүү (акыркы 14 күн)</b><p class="muted" style="margin:4px 0 8px;">Канча адам кирди · канчасы 1-сабакты ачты · канчасы атын жазып катталды</p><div id="mxList"><p class="muted">Жүктөлүүдө…</p></div></div><div class="card"><b>Окуучуну кол менен кошуу</b><p class="muted" style="margin:4px 0 8px;">Аты-жөнүн жазсаңыз — пароль автоматтык түзүлөт. Ошол пароль менен окуучу каалаган телефондон кире алат.</p><div class="row"><input id="mnName" placeholder="Окуучунун аты-жөнү" style="flex:1;min-width:160px;"/><select id="mnLv" style="flex:1;min-width:150px;"><option value="all">Бардык сабактар</option>${ls.map((l,i)=>`<option value="upto:${i}">→ ${i+1}-сабакка чейин</option>`).join("")}</select><button class="btn" id="mnOk">Кошуу</button></div></div><div class="card"><b>Катталган окуучулар</b><p class="muted" style="margin:4px 0 8px;">Ар биринин паролу, төлөмү, деңгээли. Токтотуп же кайра уруксат бере аласыз:</p><div id="grList"><p class="muted">Жүктөлүүдө…</p></div></div>`;
+  qs("#opOk").onclick=()=>{data.access={openCount:Math.max(1,+qs("#opN").value||1)};scheduleSave();const b=qs("#opOk");b.textContent="";setTimeout(()=>{const x=qs("#opOk");if(x)x.textContent="Сактоо";},1200);};
+  qs("#regOk").onclick=()=>{data.regText=qs("#regTx").value.trim();data.price=qs("#prcIn").value.trim();scheduleSave();const b=qs("#regOk");b.textContent="Сакталды";setTimeout(()=>{const x=qs("#regOk");if(x)x.textContent="Сактоо";},1200);};
+  const genPass=()=>Array.from(crypto.getRandomValues(new Uint8Array(6))).map(n=>"ABCDEFGHJKMNPQRSTUVWXYZ23456789"[n%31]).join("");
+  let statsAll={};try{const s=await get(ref(db,`${ROOT}/stats`));statsAll=s.exists()?s.val():{};}catch(e){}
+  let placeAll={};try{const s=await get(ref(db,`${ROOT}/placement`));placeAll=s.exists()?s.val():{};}catch(e){}
+  const levelOf=sk=>{let passed=0;ls.forEach(l=>{const r=statsAll?.[l.id]?.[sk];if(r&&(r.passed||(r.best||0)>=lset(l).pass))passed++;});return{passed,total:ls.length,pct:ls.length?Math.round(passed/ls.length*100):0};};
+  const drawReqs=async()=>{
+    let rq={};try{const s=await get(ref(db,`${ROOT}/requests`));rq=s.exists()?s.val():{};}catch(e){}
+    const el=qs("#rqList");if(!el)return;
+    const ent=Object.entries(rq).sort((a,b)=>(b[1].ts||0)-(a[1].ts||0));
+    el.innerHTML=ent.length?ent.map(([k,r])=>`<div class="stcard"><div><b>${esc(r.name)}</b> · <a class="wa" href="https://wa.me/${esc((r.phone||"").replace(/[^0-9]/g,""))}" target="_blank">${esc(r.phone||"—")}</a><br/><span class="muted">${esc(r.note||"чек көрсөтүлгөн жок")} · сураганы: ${esc(r.lname||"—")} · ${new Date(r.ts).toLocaleDateString()}</span>
+      ${placeAll[k]?`<br/><span style="font-size:0.78rem;">Деңгээл тести: <b>${esc(placeAll[k].suggestName||"")}</b> (${placeAll[k].ok}/${placeAll[k].total} туура) ${placeAll[k].url?`</span><audio controls preload="none" src="${esc(placeAll[k].url)}" style="height:30px;max-width:100%;margin-top:4px;"></audio><span>`:""}</span>`:""}</div><div class="row mt"><select data-gl="${k}" style="flex:1;min-width:140px;"><option value="all">Бардык сабактар</option>
+      ${ls.map((l,i)=>`<option value="upto:${i}" ${placeAll[k]&&placeAll[k].suggest===i?"selected":""}>→ ${i+1}-сабакка чейин ачуу${placeAll[k]&&placeAll[k].suggest===i?" (деңгээл сунушу)":""}</option>`).join("")}
+      ${ls.map(l=>`<option value="${l.id}" ${!placeAll[k]&&r.lid===l.id?"selected":""}>${esc(l.name)} гана</option>`).join("")}</select><button class="btn sm" data-gr="${k}">Ачып берүү</button><button class="btn sm r" data-rj="${k}">✕</button></div></div>`).join(""):`<p class="muted">Жаңы билдирүү жок</p>`;
+    el.querySelectorAll("[data-gr]").forEach(b=>b.onclick=async()=>{
+      const k=b.dataset.gr;const r=rq[k];const v=el.querySelector(`[data-gl="${k}"]`).value;
+      const pass=genPass();
+      const patch={name:r.name,phone:r.phone||"",pay:r.note||"",ts:Date.now(),pass,active:true};
+      if(v==="all")patch.all=true;
+      else if(v.startsWith("upto:"))patch.upto=+v.slice(5);
+      else patch[v]=true;
+      await update(ref(db,`${ROOT}/grants/${k}`),patch).catch(()=>{});
+      await set(ref(db,`${ROOT}/requests/${k}`),null).catch(()=>{});
+      const ph=(r.phone||"").replace(/[^0-9]/g,"");
+      openModal(`<h3>Ачылды</h3><p class="mt">${esc(r.name)} үчүн кирүү паролу:</p><p class="center" style="font-size:1.6rem;letter-spacing:4px;font-weight:700;color:var(--em-d);">${pass}</p><a class="btn mt" style="display:block;text-align:center;text-decoration:none;" target="_blank" href="https://wa.me/${ph}?text=${encodeURIComponent("Ассалому алейкум! Сабакка кирүү паролуңуз: "+pass)}">WhatsApp менен жөнөтүү</a><button class="btn g mt" style="width:100%;" id="gc">Жабуу</button>`);
+      qs("#gc").onclick=()=>{closeModal();};
+      drawReqs();drawGrants();
+    });
+    el.querySelectorAll("[data-rj]").forEach(b=>b.onclick=async()=>{await set(ref(db,`${ROOT}/requests/${b.dataset.rj}`),null).catch(()=>{});drawReqs();});
+  };
+  const drawGrants=async()=>{
+    let gr={};try{const s=await get(ref(db,`${ROOT}/grants`));gr=s.exists()?s.val():{};}catch(e){}
+    const el=qs("#grList");if(!el)return;
+    const ent=Object.entries(gr).sort((a,b)=>(b[1].ts||0)-(a[1].ts||0));
+    el.innerHTML=ent.length?ent.map(([k,g])=>{
+      const lv=levelOf(k);
+      const scope=g.all?"бардык сабактар":g.upto!=null?`→ ${+g.upto+1}-сабакка чейин`:ls.filter(l=>g[l.id]).map(l=>esc(l.name)).join(", ")||"—";
+      const ph=(g.phone||"").replace(/[^0-9]/g,"");
+      return`<div class="stcard"><div class="row"><b class="grow">${esc(g.name||k)}</b>${g.active!==false?'<span class="badge on">активдүү</span>':'<span class="badge off">токтотулган</span>'}</div><p class="muted" style="margin:4px 0;">${ph?`<a class="wa" href="https://wa.me/${ph}" target="_blank">${esc(g.phone)}</a> · `:""}катталган: ${g.ts?new Date(g.ts).toLocaleDateString():"—"} · ${esc(g.pay||"—")}<br/>Деңгээли: <b>${lv.passed}/${lv.total} сабак (${lv.pct}%)</b> · Ачык: ${scope}</p><div class="row mt"><select data-lv="${k}" style="flex:1;min-width:150px;"><option value="">— ачык сабактарды өзгөртүү —</option><option value="all" ${g.all?"selected":""}>Бардык сабактар ачык</option>
+      ${ls.map((l,i)=>`<option value="upto:${i}" ${g.upto==i?"selected":""}>→ ${i+1}-сабакка чейин ачык (тестсиз)</option>`).join("")}
+      </select><button class="btn sm" data-lvok="${k}">Колдонуу</button></div><div class="row mt"><span class="muted">Пароль:</span><b style="letter-spacing:2px;font-size:1.05rem;">${esc(g.pass||"—")}</b><button class="btn sm g" data-np="${k}">жаңылоо</button><span class="grow"></span><button class="btn sm ${g.active!==false?"r":""}" data-tg="${k}">${g.active!==false?"Токтотуу":"Уруксат берүү"}</button><button class="btn sm r" data-dg="${k}">✕</button></div></div>`;}).join(""):`<p class="muted">Азырынча катталган окуучу жок</p>`;
+    el.querySelectorAll("[data-lvok]").forEach(b=>b.onclick=async()=>{
+      const k=b.dataset.lvok;const v=el.querySelector(`[data-lv="${k}"]`).value;if(!v)return;
+      const patch={all:null,upto:null,active:true};
+      ls.forEach(l=>patch[l.id]=null);
+      if(v==="all")patch.all=true; else if(v.startsWith("upto:"))patch.upto=+v.slice(5);
+      if(!gr[k]||!gr[k].pass)patch.pass=genPass();
+      await update(ref(db,`${ROOT}/grants/${k}`),patch).catch(()=>{});
+      drawGrants();
+    });
+    el.querySelectorAll("[data-np]").forEach(b=>b.onclick=async()=>{const pass=genPass();await update(ref(db,`${ROOT}/grants/${b.dataset.np}`),{pass}).catch(()=>{});drawGrants();});
+    el.querySelectorAll("[data-tg]").forEach(b=>b.onclick=async()=>{const g=gr[b.dataset.tg];await update(ref(db,`${ROOT}/grants/${b.dataset.tg}`),{active:g.active===false}).catch(()=>{});drawGrants();});
+    el.querySelectorAll("[data-dg]").forEach(b=>b.onclick=async()=>{if(!confirm("Окуучунун доступун толук өчүрөсүзбү?"))return;await set(ref(db,`${ROOT}/grants/${b.dataset.dg}`),null).catch(()=>{});drawGrants();});
+  };
+  const drawMx=async()=>{
+    let mx={};try{const s2=await get(ref(db,`${ROOT}/metrics`));mx=s2.exists()?s2.val():{};}catch(e){}
+    const el=qs("#mxList");if(!el)return;
+    const days=Object.keys(mx).sort().slice(-14).reverse();
+    if(!days.length){el.innerHTML=`<p class="muted">Азырынча маалымат жок</p>`;return;}
+    const sum=days.reduce((a,d)=>({v:a.v+(mx[d].visit||0),l:a.l+(mx[d].lesson1||0),r:a.r+(mx[d].reg||0)}),{v:0,l:0,r:0});
+    el.innerHTML=`<div class="prog"><span class="chip">Кирген адам<b>${sum.v}</b></span><span class="chip">1-сабакты ачкан<b>${sum.l}</b></span><span class="chip tot">Атын жазып катталган<b>${sum.r}</b></span></div><table class="mt"><tr><th>Күн</th><th>Кирген</th><th>1-сабак</th><th>Катталган</th></tr>
+    ${days.map(d=>`<tr><td>${esc(d)}</td><td>${mx[d].visit||0}</td><td>${mx[d].lesson1||0}</td><td>${mx[d].reg||0}</td></tr>`).join("")}</table>`;
+  };
+  qs("#mnOk").onclick=async()=>{
+    const nm=qs("#mnName").value.trim();if(!nm){alert("Атын жазыңыз");return;}
+    const v=qs("#mnLv").value;const pass=genPass();
+    const patch={name:nm,ts:Date.now(),pass,active:true,all:null,upto:null};
+    if(v==="all")patch.all=true;else if(v.startsWith("upto:"))patch.upto=+v.slice(5);
+    await update(ref(db,`${ROOT}/grants/${skey(nm)}`),patch).catch(()=>{});
+    qs("#mnName").value="";alert(`Даяр!\n\nОкуучу: ${nm}\nПароль: ${pass}\n\nУшул паролду окуучуга бериңиз.`);
+    drawGrants();
+  };
+  drawMx();drawReqs();drawGrants();
+  drawMx();drawReqs();drawGrants();
+}
+
+
+/* Окуучуга көрүнгөн тексттерди Устаз өз жайында өзгөртөт */
+const TXT_FIELDS=[
+  ["loginTitle","Кирүү терезесинин аталышы",1],
+  ["loginHint","Кирүү терезесинин түшүндүрмөсү",3],
+  ["stepsOn","Башкы беттеги «3 кадам» көрүнсүнбү (1 = ооба, 0 = жок)",1],
+  ["step1","1-кадам",2],["step2","2-кадам",2],["step3","3-кадам",2],
+  ["lessonsTitle","«Сабактар» деген аталыш",1],
+  ["lockPay","Жабык сабак (уруксат керек) — жазуу",2],
+  ["lockProg","Жабык сабак (мурункусунан өтө элек) — жазуу",2],
+  ["emptyLessons","Сабак жок болгондо чыга турган жазуу",2],
+  ["tapHint","Сабак бетиндеги көрсөтмө",3],
+  ["readHint","Үй окуусундагы көрсөтмө",3],
+  ["placeTitle","Деңгээл аныктоо — аталышы",1],
+  ["placeHint","Деңгээл аныктоо — түшүндүрмөсү",2],
+  ["wrongPass","Пароль туура эмес болгондогу жазуу",2]
+];
+function drawTexts(box){
+  box.innerHTML=`<div class="card"><b>Окуучуга көрүнгөн тексттер</b><p class="muted" style="margin:6px 0 0;">Ар бир жазууну өз каалооңузча өзгөртүңүз. Бош калтырсаңыз — демейки жазуу колдонулат.</p></div>
+  ${TXT_FIELDS.map(([k,label,rows])=>`<div class="card"><b style="font-size:0.92rem;">${esc(label)}</b>
+    ${rows>1?`<textarea class="mt" data-tx="${k}" rows="${rows}" placeholder="${esc(UIT[k])}">${esc((data.ui&&data.ui[k])||"")}</textarea>`
+            :`<input class="mt" data-tx="${k}" placeholder="${esc(UIT[k])}" value="${esc((data.ui&&data.ui[k])||"")}"/>`}
+    <p class="muted" style="margin-top:6px;">Демейки: ${esc(UIT[k])}</p></div>`).join("")}
+  <div class="row mt"><button class="btn grow" id="txOk">Сактоо</button><button class="btn r" id="txRs">Баарын демейкиге кайтаруу</button></div>`;
+  qs("#txOk").onclick=()=>{
+    const ui={};
+    box.querySelectorAll("[data-tx]").forEach(el=>{const v=el.value.trim();if(v)ui[el.dataset.tx]=v;});
+    data.ui=ui;scheduleSave();
+    const b=qs("#txOk");b.textContent="Сакталды";setTimeout(()=>{const x=qs("#txOk");if(x)x.textContent="Сактоо";},1400);
+  };
+  qs("#txRs").onclick=()=>{if(!confirm("Бардык тексттер демейкиге кайтарылсынбы?"))return;data.ui={};scheduleSave();drawTexts(box);};
+}
+
+function lessonSettings(lid){
+  const L=data.lessons[lid],s=lset(L);
+  openModal(`<h3>${esc(L.name)} — өзгөчө жөндөөлөр</h3><p class="muted mt">Сырткы видео шилтемеси (YouTube/mp4). Сайтта жаздырсаңыз — автоматтык коюлат:</p><input id="cVid" value="${esc(L.vid||"")}" placeholder="https://youtu.be/..."/><p class="muted mt">Угуу лимити:</p><input id="cLis" type="number" min="0" max="200" value="${s.listen}"/><p class="muted mt">Жардам лимити:</p><input id="cHi" type="number" min="0" max="50" value="${s.hints}"/><p class="muted mt">Үй окуу лимити:</p><input id="cHm" type="number" min="1" max="30" value="${s.home}"/><p class="muted mt">Тест суроолорунун саны:</p><input id="cTq" type="number" min="3" max="30" value="${s.testQ}"/><p class="muted mt">Айтуу тестинде ар тамгага секунд:</p><input id="cSay" type="number" min="3" max="30" value="${s.say}"/><p class="muted mt">Өтүү босогосу (%):</p><input id="cPs" type="number" min="50" max="100" value="${s.pass}"/>
+  ${L.vid?`<button class="btn r mt" style="width:100%;" id="cVidDel">Сабактын видеосун өчүрүү</button>`:""}
+  <button class="btn mt" style="width:100%;" id="cOk">Сактоо</button>`);
+  qs("#cVidDel")?.addEventListener("click",()=>{if(!confirm("Видеону өчүрөсүзбү?"))return;L.vid=undefined;scheduleSave();closeModal();render();});
+  qs("#cOk").onclick=()=>{L.vid=qs("#cVid").value.trim()||undefined;L.set={listen:+qs("#cLis").value||0,hints:+qs("#cHi").value||0,home:+qs("#cHm").value||1,testQ:+qs("#cTq").value||10,say:+qs("#cSay").value||7,pass:+qs("#cPs").value||90};scheduleSave();closeModal();render();};
+}
+/* окуучунун үн жазууларын угуу жана баа коюу */
+async function openRecsModal(lid,sk,name){
+  const s=lset(data.lessons[lid]||{});
+  openModal(`<div class="recwide"><h3>${esc(name)}</h3><p class="muted">Диктофон жазуулары (үй окуусу, айтуу тести):</p><p class="muted" id="rld">Жүктөлүүдө…</p><div id="rlist"></div><div class="card"><b>Баалоо</b><p class="muted" style="margin:4px 0 8px;">Жалпы = Үй окуусу 30% + Таануу 30% + Айтуу 40% · өтүү босогосу ${s.pass}%. Таануу: <b id="recPct">—</b> · Үй окуусу: <b id="homePct">—</b>. Жазууну угуп Айтуу пайызын коюңуз.</p><div class="row"><span class="muted">Айтуу:</span><input id="grIn" type="number" min="0" max="100" placeholder="0–100" style="max-width:100px;"/><span id="finPct" class="muted"></span></div><div class="row mt" style="align-items:center;"><span class="muted">Баа:</span>${[2,3,4,5].map(m=>`<button class="btn sm g" data-m5="${m}">${m}</button>`).join("")}<span id="m5cur" style="font-weight:700;color:var(--em-d);font-size:1.1rem;"></span></div><button class="btn mt" style="width:100%;" id="grOk">Сактоо</button><label class="row mt" style="gap:6px;cursor:pointer;"><input type="checkbox" id="psChk" style="width:auto;"/><span style="font-size:0.85rem;">Сабактан өттү деп белгилөө (кол менен ачуу)</span></label></div></div>`);
+  let cur={};try{const x=await get(ref(db,`${ROOT}/stats/${lid}/${sk}`));cur=x.exists()?x.val():{};}catch(e){}
+  let m5=cur.mark5!=null?cur.mark5:null;
+  const rp=qs("#recPct");if(rp)rp.textContent=(cur.best||0)+"%";
+  const _hp=Math.min(100,Math.round((cur.reads||0)/Math.max(1,s.home)*100));
+  const hp=qs("#homePct");if(hp)hp.textContent=_hp+"%";
+  const updFin=()=>{const v=+qs("#grIn").value;const f=qs("#finPct");if(f)f.textContent=isNaN(v)||qs("#grIn").value===""?"":`→ Жалпы: ${Math.round(_hp*0.3+(cur.best||0)*0.3+v*0.4)}%`;};
+  const updM5=()=>{const c=qs("#m5cur");if(c)c.textContent=m5!=null?m5:"";document.querySelectorAll("[data-m5]").forEach(b=>b.classList.toggle("g",+b.dataset.m5!==m5));};
+  document.querySelectorAll("[data-m5]").forEach(b=>b.onclick=()=>{m5=+b.dataset.m5;updM5();});
+  const g=qs("#grIn");if(g){if(cur.grade!=null)g.value=cur.grade;g.oninput=updFin;updFin();}
+  updM5();
+  const pc=qs("#psChk");if(pc)pc.checked=!!cur.passed;
+  let recs={};try{const s=await get(ref(db,`${ROOT}/recs/${lid}/${sk}`));recs=s.exists()?s.val():{};}catch(e){}
+  const rl=qs("#rld");if(rl)rl.style.display="none";
+  const items=Object.entries(recs).sort((a,b)=>(b[1].ts||0)-(a[1].ts||0));
+  const box=qs("#rlist");
+  const fmt=t=>`${Math.floor((t||0)/60)}:${String((t||0)%60).padStart(2,"0")}`;
+  if(box)box.innerHTML=items.length?items.map(([rid,r])=>`<div class="rec-item" style="flex-direction:column;align-items:stretch;"><div class="row"><b>${r.type==="voice"?"Айтуу тести":r.type==="test"?`Таануу тести · ${r.score||0}%`:`Үй окуусу · толук окуу: ${r.reads||0}`}</b><span class="grow"></span><span class="muted">${new Date(r.ts).toLocaleString()} · ${r.dur||0} сек</span></div>
+    ${r.url?`<div class="row"><audio controls preload="none" src="${esc(r.url)}"></audio><a class="btn sm g" style="text-decoration:none;" href="${esc(r.url)}" target="_blank" download></a></div>`:`<p style="color:var(--red);font-size:0.82rem;">Аудио жетпей калган — окуучудан кайра тапшырууну өтүнүңүз</p>`}
+    ${(r.type==="test"||r.type==="voice")&&r.qlog?`
+      ${r.type==="voice"?`<p class="muted" style="margin-top:6px;">Аудиону угуп, ката айтылган тамганы <b>басыңыз</b>: 1-басым орто · 2-басым чоң · 3-басым — алып салуу. Белгиден кийин менен туура окулушун жаздырыңыз — окуучу китебинде тамганы кармап туруп угат.</p>`:""}
+      <div class="qgrid">${r.qlog.map((x,i)=>`<span class="qw ${r.marks?.[i]===2?"mk2":r.marks?.[i]===1?"mk1":""}" data-r="${rid}" data-i="${i}"><span class="qar">${esc(x.ar)}</span><span class="qtm">${fmt(x.t)} ${x.ok===true?"":x.ok===false?"":""}</span></span>`).join("")}</div>`:""}
+  </div>`).join(""):`<p class="muted">Азырынча үн жазуулары жок</p>`;
+  let fixRec=null;
+  if(box)box.querySelectorAll(".qw").forEach(el=>{
+    el.onclick=()=>{
+      const rid=el.dataset.r,i=el.dataset.i;
+      const r=recs[rid];if(!r)return;
+      r.marks=r.marks||{};
+      const cur2=+(r.marks[i]||0);const nxt=(cur2+1)%3;
+      if(nxt===0)delete r.marks[i];else r.marks[i]=nxt;
+      el.classList.remove("mk1","mk2");if(nxt)el.classList.add(nxt===2?"mk2":"mk1");
+      update(ref(db,`${ROOT}/recs/${lid}/${sk}/${rid}`),{marks:r.marks}).catch(()=>{});
+      const ar=r.qlog[i].ar;
+      // окуучунун китебинде да белгиленет
+      if(nxt===0)update(ref(db,`${ROOT}/stats/${lid}/${sk}/mist`),{[ar]:null}).catch(()=>{});
+      else update(ref(db,`${ROOT}/stats/${lid}/${sk}/mist/${ar}`),{lv:nxt}).catch(()=>{});
+      // оңдоо баскычы
+      let fb=el.querySelector(".fixb");
+      if(nxt>0&&!fb){fb=document.createElement("button");fb.className="fixb";fb.textContent="";el.appendChild(fb);bindFix(fb,ar);}
+      if(nxt===0&&fb)fb.remove();
+    };
+  });
+  function bindFix(fb,ar){
+    fb.onclick=async ev=>{
+      ev.stopPropagation();
+      if(fixRec){ // токтотуп жөнөтүү
+        const fr=fixRec;fixRec=null;fb.textContent="";
+        try{if(fr.rec.state!=="inactive"){await new Promise(res=>{fr.rec.onstop=res;fr.rec.stop();});}}catch(e){}
+        fr.stream.getTracks().forEach(t=>t.stop());
+        if(!fr.chunks.length){fb.textContent="";return;}
+        const mt=fr.rec.mimeType||recMime()||"audio/webm";
+        let blob=new Blob(fr.chunks,{type:mt}),ext=recExt(mt),ct=mt;
+        const w=await toWav(blob,20); if(w){blob=w;ext="wav";ct="audio/wav";}
+        const task=uploadBytesResumable(sref(storage,`recordings/fix/${lid}/${sk}/${uid()}.${ext}`),blob,{contentType:ct});
+        task.on("state_changed",null,()=>{fb.textContent="";},async()=>{
+          const url=await getDownloadURL(task.snapshot.ref);
+          update(ref(db,`${ROOT}/stats/${lid}/${sk}/mist/${fr.ar}`),{fix:url}).catch(()=>{});
+          fb.textContent="";
+        });
+        return;
+      }
+      const stream=await micStream(true);
+      if(!stream)return;
+      try{
+        const chunks=[];const m=recMime();const rec=new MediaRecorder(stream,m?{mimeType:m}:undefined);
+        rec.ondataavailable=e2=>{if(e2.data.size)chunks.push(e2.data);};rec.start(300);
+        fixRec={rec,chunks,stream,ar};fb.textContent="";
+      }catch(e){stream.getTracks().forEach(t=>t.stop());toast("Жаздыруу башталган жок");}
+    };
+  }
+  if(box)box.querySelectorAll(".qw").forEach(el=>{
+    const rid=el.dataset.r,i=el.dataset.i;const r=recs[rid];
+    if(r&&r.marks&&r.marks[i]){const fb=document.createElement("button");fb.className="fixb";const ar=r.qlog[i].ar;fb.textContent=cur.mist?.[ar]?.fix?"":"";el.appendChild(fb);bindFix(fb,ar);}
+  });
+  qs("#grOk").onclick=()=>{const v=Math.max(0,Math.min(100,+qs("#grIn").value||0));const patch={grade:v,graded:Date.now(),passed:qs("#psChk").checked};if(m5!=null)patch.mark5=m5;update(ref(db,`${ROOT}/stats/${lid}/${sk}`),patch).catch(()=>{});update(ref(db,`${ROOT}/progress/${sk}/${lid}`),patch).catch(()=>{});const b=qs("#grOk");b.textContent="Сакталды";setTimeout(()=>{const x=qs("#grOk");if(x)x.textContent="Сактоо";},1400);};
+  qs("#psChk").onchange=e=>{update(ref(db,`${ROOT}/stats/${lid}/${sk}`),{passed:e.target.checked}).catch(()=>{});update(ref(db,`${ROOT}/progress/${sk}/${lid}`),{passed:e.target.checked}).catch(()=>{});};
+}
+/* паролду өзгөртүү */
+function pwChange(){
+  openModal(`<h3>Паролду өзгөртүү</h3><input id="opw" type="password" class="mt" placeholder="Азыркы пароль"/><input id="np1" type="password" class="mt" placeholder="Жаңы пароль"/><input id="np2" type="password" class="mt" placeholder="Жаңы паролду кайталаңыз"/><p class="muted mt">Жардамчынын паролу (өзгөртүү үчүн жазыңыз — жардамчы Сабактар, Статистика, Журнал, Жөндөөлөргө гана кирет; Доступ, Профиль, Пароль ага жабык${data.auth?.helpHash?" · азыр коюлган ":""}):</p><input id="hp1" type="password" placeholder="Жардамчынын жаңы паролу (бош = өзгөрбөйт)"/>
+  ${data.auth?.helpHash?`<label class="row mt" style="gap:6px;cursor:pointer;"><input type="checkbox" id="hpDel" style="width:auto;"/><span style="font-size:0.85rem;">Жардамчынын доступун өчүрүү</span></label>`:""}
+  <p id="pwe" class="muted" style="color:var(--red);display:none;margin-top:6px;"></p><div class="row mt"><button class="btn grow" id="pwOk">Өзгөртүү</button><button class="btn g" id="pwC">Жабуу</button></div>`);
+  qs("#pwC").onclick=closeModal;
+  qs("#pwOk").onclick=()=>{const e=qs("#pwe"),o=qs("#opw").value,n1=qs("#np1").value,n2=qs("#np2").value;
+    if(hashStr(o)!==data.auth?.hash){e.textContent="Азыркы пароль туура эмес";e.style.display="block";return;}
+    if(n1.length<4){e.textContent="Жаңы пароль кеминде 4 белги болсун";e.style.display="block";return;}
+    if(n1!==n2){e.textContent="Жаңы паролдор дал келген жок";e.style.display="block";return;}
+    const na={hash:hashStr(n1)};if(data.auth?.helpHash&&!qs("#hpDel")?.checked)na.helpHash=data.auth.helpHash;const hp=qs("#hp1")?.value||"";if(hp.length>=4)na.helpHash=hashStr(hp);data.auth=na;scheduleSave();closeModal();alert("Пароль өзгөртүлдү");};
+}
+
+let _noStudio=null;
+/* Видео байлоо: YouTube/mp4 шилтеме же файл жүктөө */
+function vidModal(lid){
+  const L=data.lessons[lid];if(!L)return;
+  openModal(`<h3>${esc(L.name)} — видео</h3><p class="muted mt">${L.vid?"Видео байланган ":"Видео азырынча жок"}</p><p class="muted mt">YouTube же түз mp4 шилтеме:</p><input id="vmUrl" value="${esc(L.vid||"")}" placeholder="https://youtu.be/..."/><p class="muted mt">же түзмөктөн файл жүктөө:</p><div class="row"><label class="btn g sm" for="vmF" style="cursor:pointer;">Файл тандоо</label><input type="file" id="vmF" accept="video/*" style="display:none;"/><span class="muted" id="vmSt"></span></div><div class="row mt"><button class="btn grow" id="vmOk">Сактоо</button>${L.vid?`<button class="btn r" id="vmDel"></button>`:""}<button class="btn g" id="vmC">Жабуу</button></div>`);
+  qs("#vmC").onclick=closeModal;
+  qs("#vmDel")?.addEventListener("click",()=>{if(!confirm("Видеону өчүрөсүзбү?"))return;L.vid=undefined;scheduleSave();closeModal();render();});
+  qs("#vmOk").onclick=()=>{const u=qs("#vmUrl").value.trim();L.vid=u||undefined;scheduleSave();closeModal();render();};
+  qs("#vmF").onchange=e=>{
+    const f=e.target.files[0];if(!f)return;
+    if(f.size>300*1048576){alert("300 МБдан чоң видео болбойт — кыскартып жүктөңүз");return;}
+    const st=qs("#vmSt");if(st)st.textContent="Жүктөлүүдө… 0%";
+    const ext=(f.name.split(".").pop()||"mp4").replace(/[^a-z0-9]/gi,"").toLowerCase();
+    const task=uploadBytesResumable(sref(storage,`videos/${lid}/${uid()}.${ext}`),f,{contentType:f.type||"video/mp4"});
+    task.on("state_changed",s2=>{if(st)st.textContent="Жүктөлүүдө… "+Math.round(s2.bytesTransferred/s2.totalBytes*100)+"%";},
+      ()=>{if(st)st.textContent="Жүктөлгөн жок — интернетти текшериңиз";},
+      async()=>{L.vid=await getDownloadURL(task.snapshot.ref);scheduleSave();if(st)st.textContent="Байланды";});
+  };
+}
+
+/* ---------- сабак / редактор ---------- */
+function renderLesson(edit){
+  const L=data.lessons[view.lid];
+  if(!L){view={page:teacher?"tlessons":"home"};render();return;}
+  preloadTokAudio(L);
+  const s=lset(L);const toks=L.tokens||[];
+  app.innerHTML=`
+  <div class="row mt" id="lessTop"><button class="btn sm g" id="back">← Артка</button><b class="grow">${esc(L.name)}</b>
+    ${teacher?`<button class="btn sm g" id="prevL">←</button><button class="btn sm g" id="nextL">→</button>`:""}
+    ${!edit&&(L.tokens||[]).some(t=>t.audio)?`<button class="btn sm g" id="dlB" title="Үндөрдү телефонго жүктөө"></button>`:""}
+    ${edit?`<button class="btn sm g" id="vidMB">Видео</button><button class="btn sm g" id="prevM">Окуучу көрүнүшү</button>`
+      :teacher?`<button class="btn sm" id="editM">Түзөтүү</button>`:""}
+  </div>
+  ${edit?videoUploadHTML(L):""}
+  ${!edit&&L.vid&&!vidHide?`<div class="vidwrap${vidMini?" mini":""}" id="vidwrap"><div class="vidin" id="vidin"></div><div class="vidctl"><button id="vidTg">${vidMini?"⤢":"▾"}</button><button id="vidX">✕</button></div></div>`:""}
+  ${!edit&&L.vid&&vidHide?`<p class="center" style="margin-top:8px;"><button class="btn sm g" id="vidShow">Видеону көрсөтүү</button></p>`:""}
+  <div class="phone-outer"><div class="phone" id="canvas" oncontextmenu="return false">
+    ${edit&&gridOn?`<div class="gridlayer"></div>`:""}
+    ${edit?`<div class="guide v" id="gv" style="display:none;"></div><div class="guide h" id="gh" style="display:none;"></div>`:""}
+    ${""/* көчүрүүдөн коргоо canvas oncontextmenu менен */}${toks.map(tk=>`<span class="tok ${tk.off?"off":""} ${edit&&sel===tk.id?"sel":""} ${edit&&multi.includes(tk.id)?"multi":""}" data-id="${tk.id}" style="left:${tk.x}%;top:${tk.y}%;font-family:${tk.font||FONTS[0][0]};font-size:calc(${tk.size||34}px * var(--kf,1));letter-spacing:calc(${tk.sp||0}px * var(--kf,1));font-weight:${tk.b?"700":"400"};">${esc(tk.ar)}</span>`).join("")}
+  </div></div>
+  ${edit?toolsHTML():`
+  <div class="prog" id="progCard"></div><div class="actionbar"><button class="btn" id="homeB">${homeRead?"Окууну бүтүрүү":"Үй окуусу"}</button><button class="btn g" id="testB">Тест тапшыруу</button><button class="btn g" id="nextB">Кийинки сабак</button></div><p class="muted center mt" id="modeInfo" style="font-size:0.72rem;">${esc(T("tapHint"))} <b>(${s.listen} жолу)</b> · Жардам: <b id="hintsLeft">?</b></p><p class="muted center" id="readCnt" style="display:none;font-size:0.9rem;"></p><div class="voicewarn" id="vWarn">Үн чыгарып окуңуз!</div>`}`;
+  qs("#back").onclick=()=>{stopHomeRead();dropVid();view={page:teacher?"tlessons":"home"};sel=null;multi=[];render();};
+  qs("#prevM")?.addEventListener("click",()=>{vidMini=false;view={page:"lesson",lid:view.lid};render();});
+  qs("#editM")?.addEventListener("click",()=>{view={page:"edit",lid:view.lid};render();});
+  qs("#dlB")?.addEventListener("click",async e=>{
+    const b=e.currentTarget;b.disabled=true;b.textContent="0%";
+    try{
+      const n=await cacheLesson(L,(d,t)=>{b.textContent=Math.round(d/t*100)+"%";});
+      b.textContent="";toast(`Сабактын ${n} үнү телефонго жүктөлдү — эми интернетсиз да заматта угулат`);
+    }catch(err){b.textContent="";toast("Жүктөлгөн жок — интернетти текшериңиз");}
+    setTimeout(()=>{const x=qs("#dlB");if(x){x.textContent="";x.disabled=false;}},2500);
+  });
+  qs("#vidMB")?.addEventListener("click",()=>vidModal(view.lid));
+  const _nav=d=>{const ls=lessonsSorted();const i=ls.findIndex(l=>l.id===view.lid);const j=i+d;if(j<0||j>=ls.length)return;dropVid();sel=null;multi=[];undoStack=[];redoStack=[];view={page:edit?"edit":"lesson",lid:ls[j].id};render();};
+  qs("#prevL")?.addEventListener("click",()=>_nav(-1));
+  qs("#nextL")?.addEventListener("click",()=>_nav(1));
+  qs("#lvidB")?.addEventListener("click",()=>openVideoModal(L.vid,`${L.name}`));
+  const videoInput=qs("#videoInput");
+  if(videoInput)videoInput.onchange=previewVideo;
+
+  const canvas=qs("#canvas");
+  if(canvas){const _w=canvas.clientWidth||canvas.getBoundingClientRect().width||760;canvas.style.setProperty("--kf",Math.max(0.3,Math.min(1.6,_w/760)).toFixed(4));}
+  if(!edit){
+    const locked=!!view.locked&&!teacher;
+    // барактоо: китеп бетин солго/оңго сүрүү
+    let _swx=null,_swy=null;
+    canvas.addEventListener("touchstart",e=>{if(homeRead)return;_swx=e.touches[0].clientX;_swy=e.touches[0].clientY;},{passive:true});
+    canvas.addEventListener("touchend",e=>{if(_swx==null||homeRead)return;const dx=e.changedTouches[0].clientX-_swx,dy=e.changedTouches[0].clientY-_swy;_swx=null;if(Math.abs(dx)<70||Math.abs(dy)>70)return;swipeLesson(dx<0?1:-1);},{passive:true});
+    if(locked){
+      const veil=document.createElement("div");veil.className="lockveil";
+      veil.innerHTML=`<span>Бул сабак азырынча жабык</span><button class="btn sm" id="lkOpen">Ачуу жолдору</button><span style="color:#fff;opacity:.8;font-size:0.74rem;font-weight:400;">← сүрүп мурунку сабакка кайтасыз</span>`;
+      canvas.appendChild(veil);
+      veil.querySelector("#lkOpen").onclick=()=>lockModal(view.lid);
+      const ab=qs(".actionbar");if(ab)ab.style.display="none";
+      const mi=qs("#modeInfo");if(mi)mi.style.display="none";
+      return; // жабык бетте башка эч нерсе иштебейт
+    }
+    if(L.vid&&!vidHide)mountVid(L);
+    const setMini=v=>{vidMini=v;const w=qs("#vidwrap");if(w)w.classList.toggle("mini",v);const b=qs("#vidTg");if(b)b.textContent=v?"⤢":"▾";};
+    qs("#vidTg")?.addEventListener("click",()=>setMini(!vidMini));
+    qs("#vidX")?.addEventListener("click",()=>{try{vidNode&&vidNode.pause&&vidNode.pause();}catch(e){}vidHide=true;render();});
+    qs("#vidShow")?.addEventListener("click",()=>{vidHide=false;render();});
+    if(student)loadStats(view.lid).then(st=>{updLimitInfo(st,s);fillProg(st,s);
+      if(st?.mist)canvas.querySelectorAll(".tok").forEach(el2=>{const t2=toks.find(t=>t.id===el2.dataset.id);const m=t2&&st.mist[t2.ar];if(m)el2.classList.add(m.lv===2?"mist2":"mist1");});
+    });
+    else fillProg(null,s);
+    let tipEl=null,tipT=null;
+    const hideTip=()=>{clearTimeout(tipT);if(tipEl){tipEl.remove();tipEl=null;}};
+    const showTip=(el,html)=>{hideTip();const d=document.createElement("div");d.className="tip";d.style.left=el.style.left;d.style.top=el.style.top;d.innerHTML=html;canvas.appendChild(d);requestAnimationFrame(()=>d.classList.add("show"));tipEl=d;tipT=setTimeout(hideTip,2400);};
+    canvas.querySelectorAll(".tok").forEach(el=>{
+      const tk=toks.find(t=>t.id===el.dataset.id);
+      let pd=null;
+      const doTap=()=>{
+        const lb=Object.assign({},statsCache?.listensBy);
+        const c=lb[tk.id]||0;
+        if(!teacher&&c>=s.listen){showTip(el,"Угуу лимити бүттү — өзүңүз окуңуз");return;}
+        if(!teacher){lb[tk.id]=c+1;bump(view.lid,{listens:(statsCache?.listens||0)+1,listensBy:lb});}
+        el.classList.remove("flash");void el.offsetWidth;el.classList.add("flash");
+        playTok(tk);
+      };
+      const doHold=()=>{
+        const mist=statsCache?.mist?.[tk.ar];
+        if(mist&&mist.fix){
+          el.classList.remove("flash");void el.offsetWidth;el.classList.add("flash");
+          playUrl(mist.fix);
+          const heard=(+mist.heard||0)+1;
+          if(!teacher&&student){
+            if(heard>=(+s.fix||2)){ // угуу лимитине жетти — белги өзү өчөт
+              delete statsCache.mist[tk.ar];
+              update(ref(db,`${ROOT}/stats/${view.lid}/${skey(student)}/mist`),{[tk.ar]:null}).catch(()=>{});
+              el.classList.remove("mist1","mist2");
+              showTip(el,"Оңдоо угулду белги алынды");
+            }else{
+              mist.heard=heard;
+              update(ref(db,`${ROOT}/stats/${view.lid}/${skey(student)}/mist/${tk.ar}`),{heard}).catch(()=>{});
+              showTip(el,`Устаздын оңдоосу (${heard}/${+s.fix||2})`);
+            }
+          }else showTip(el,"Устаздын оңдоосу");
+          return;
+        }
+        if(!tk.tr){if(tk.video)openVideoModal(tk.video,tk.ar);return;}
+        if(teacher){showTip(el,`${esc(tk.tr)}`);return;}
+        const used=statsCache?.hints||0;
+        if(used>=s.hints){showTip(el,"Жардам лимити бүттү");return;}
+        bump(view.lid,{hints:used+1});updLimitInfo(statsCache,s);
+        showTip(el,`${esc(tk.tr)}`);
+      };
+      let held=0;
+      el.onpointerdown=()=>{
+        if(homeRead)return;
+        pd={t:Date.now()};
+        pd.t1=setTimeout(()=>{if(pd){held=Date.now();doHold();}},420);
+        pd.t2=tk.video?setTimeout(()=>{if(pd){held=Date.now();hideTip();openVideoModal(tk.video,tk.ar);}},1500):null;
+      };
+      const clr=()=>{if(pd){clearTimeout(pd.t1);clearTimeout(pd.t2);pd=null;}};
+      el.onpointerup=clr;el.onpointercancel=clr;el.onpointerleave=clr;
+      // Тап — бардык телефондо ишенимдүү иштеген click аркылуу
+      el.onclick=()=>{
+        if(homeRead)return;
+        if(held&&Date.now()-held<700){held=0;return;} // кармап тургандан кийинки жасалма click'ти өткөрбөйбүз
+        held=0;clr();
+        doTap();
+      };
+    });
+    qs("#homeB")?.addEventListener("click",()=>{if(homeRead)stopHomeRead(true);else{if(!vidMini&&L.vid&&!vidHide){vidMini=true;const w=qs("#vidwrap");if(w)w.classList.add("mini");const b2=qs("#vidTg");if(b2)b2.textContent="⤢";}startHomeRead();}});
+    qs("#nextB")?.addEventListener("click",()=>{stopHomeRead();gotoNext();});
+    qs("#testB")?.addEventListener("click",()=>{stopHomeRead();
+      if(!s.testVoice){view={page:"test",lid:view.lid};render();return;}
+      openModal(`<h3>Тестти тандаңыз</h3><button class="btn mt" style="width:100%;" id="tRc">Таануу тести<br/><span style="font-weight:400;font-size:0.78rem;opacity:0.85;">Угуп, туура жазылганын табасыз</span></button><button class="btn mt" style="width:100%;" id="tVo">Айтуу тести<br/><span style="font-weight:400;font-size:0.78rem;opacity:0.85;">Көрсөтүлгөн тамганы үн чыгарып окуйсуз — Устаз угуп, баа коёт</span></button><button class="btn g mt" style="width:100%;" id="tC">Жабуу</button>`);
+      qs("#tC").onclick=closeModal;
+      qs("#tRc").onclick=()=>{closeModal();view={page:"test",lid:view.lid};render();};
+      qs("#tVo").onclick=()=>{closeModal();view={page:"vtest",lid:view.lid};render();};
+    });
+    return;
+  }
+  bindEditor(canvas,toks);
+  bindTools();
+}
+
+/* ---------- РЕДАКТОР: так түздөө, жабышуу, көп тандоо ---------- */
+function bindEditor(canvas,toks){
+  const gv=qs("#gv"),gh=qs("#gh");
+  let drag=null,rub=null;
+  const L0=data.lessons[view.lid];
+  // Бош жерден сүйрөө — рамка менен көп тандоо; эки жолу басуу — ошол жерге жазуу
+  canvas.onpointerdown=e=>{
+    if(e.target.closest(".tok")||e.target.id==="inpAdd")return;
+    const r=canvas.getBoundingClientRect();
+    rub={x0:e.clientX-r.left,y0:e.clientY-r.top,r,el:null};
+    canvas.setPointerCapture(e.pointerId);
+  };
+  canvas.onpointermove=e=>{
+    if(!rub)return;
+    const x1=e.clientX-rub.r.left,y1=e.clientY-rub.r.top;
+    if(Math.abs(x1-rub.x0)<6&&Math.abs(y1-rub.y0)<6)return;
+    if(!rub.el){rub.el=document.createElement("div");rub.el.className="rub";canvas.appendChild(rub.el);}
+    const lx=Math.min(rub.x0,x1),ty=Math.min(rub.y0,y1);
+    rub.el.style.left=lx+"px";rub.el.style.top=ty+"px";
+    rub.el.style.width=Math.abs(x1-rub.x0)+"px";rub.el.style.height=Math.abs(y1-rub.y0)+"px";
+  };
+  canvas.onpointerup=e=>{
+    if(!rub)return;
+    const had=!!rub.el;
+    if(had){
+      const x1=e.clientX-rub.r.left,y1=e.clientY-rub.r.top;
+      const lx=Math.min(rub.x0,x1)/rub.r.width*100,rx=Math.max(rub.x0,x1)/rub.r.width*100;
+      const ty=Math.min(rub.y0,y1)/rub.r.height*100,by=Math.max(rub.y0,y1)/rub.r.height*100;
+      multi=toks.filter(t=>t.x>=lx&&t.x<=rx&&t.y>=ty&&t.y<=by).map(t=>t.id);
+      sel=multi[0]||null;
+      rub.el.remove();
+      canvas.querySelectorAll(".tok").forEach(x=>{x.classList.toggle("multi",multi.includes(x.dataset.id));x.classList.toggle("sel",x.dataset.id===sel);});
+      renderToolsState();
+    }else{sel=null;multi=[];canvas.querySelectorAll(".tok").forEach(x=>{x.classList.remove("multi","sel");});renderToolsState();}
+    rub=null;
+  };
+  canvas.ondblclick=e=>{
+    if(e.target.closest(".tok"))return;
+    const r=canvas.getBoundingClientRect();
+    const px=(e.clientX-r.left)/r.width*100, py=(e.clientY-r.top)/r.height*100;
+    qs("#inpAdd")?.remove();
+    const inp=document.createElement("input");
+    inp.id="inpAdd";inp.dir="rtl";
+    inp.style.cssText=`position:absolute;left:${px}%;top:${py}%;transform:translate(-50%,-50%);width:170px;z-index:35;font-size:26px;font-family:'Scheherazade New';background:var(--card);border:2px solid var(--em);border-radius:10px;padding:5px 9px;text-align:center;`;
+    const tb=document.querySelector(".tools");if(tb)tb.style.display="none";
+    canvas.appendChild(inp);inp.focus();
+    let done=false;
+    const commit=()=>{if(done)return;done=true;const v=inp.value.trim();inp.remove();const tb2=document.querySelector(".tools");if(tb2)tb2.style.display="";if(!v)return;snapshot();L0.tokens=L0.tokens||[];const nt={id:uid(),ar:v,x:Math.min(96,Math.max(4,px)),y:Math.min(96,Math.max(4,py)),size:+(qs("#sizeN")?.value)||34,font:FONTS[0][0],sp:0};L0.tokens.push(nt);sel=nt.id;multi=[];scheduleSave();render();};
+    inp.onkeydown=ev=>{ev.stopPropagation();if(ev.key==="Enter")commit();if(ev.key==="Escape"){done=true;inp.remove();const tb2=document.querySelector(".tools");if(tb2)tb2.style.display="";}};
+    inp.onpointerdown=ev=>ev.stopPropagation();
+    inp.onblur=()=>setTimeout(commit,150);
+  };
+  canvas.querySelectorAll(".tok").forEach(el=>{
+    el.onpointerdown=e=>{
+      e.preventDefault();
+      if(e.shiftKey||e.ctrlKey){ // көп тандоо
+        const id=el.dataset.id;
+        if(multi.includes(id))multi=multi.filter(x=>x!==id);else multi.push(id);
+        sel=id;renderToolsState();
+        canvas.querySelectorAll(".tok").forEach(x=>x.classList.toggle("multi",multi.includes(x.dataset.id)));
+        return;
+      }
+      sel=el.dataset.id;
+      if(!multi.includes(sel))multi=[];
+      if(data.lessons[view.lid]?.lock){drag=null;renderToolsState();canvas.querySelectorAll(".tok").forEach(x=>x.classList.toggle("sel",x.dataset.id===sel));return;}
+      const grp=multi.length>1&&multi.includes(sel)?multi.map(id=>{const t=toks.find(x=>x.id===id);return t?{id,ox:t.x,oy:t.y}:null;}).filter(Boolean):null;
+      drag={id:sel,moved:false,sx:e.clientX,sy:e.clientY,grp};
+      el.setPointerCapture(e.pointerId);renderToolsState();
+      canvas.querySelectorAll(".tok").forEach(x=>x.classList.toggle("sel",x.dataset.id===sel));
+    };
+    el.onpointermove=e=>{
+      if(!drag||drag.id!==el.dataset.id)return;
+      if(!drag.moved){snapshot();drag.moved=true;}
+      const r=canvas.getBoundingClientRect();
+      if(drag.grp){ // топ менен чогуу жылдыруу
+        const dx=(e.clientX-drag.sx)/r.width*100, dy=(e.clientY-drag.sy)/r.height*100;
+        drag.grp.forEach(g=>{const t=toks.find(x=>x.id===g.id);if(!t)return;t.x=Math.min(98,Math.max(2,g.ox+dx));t.y=Math.min(98,Math.max(2,g.oy+dy));const ge=canvas.querySelector(`.tok[data-id="${g.id}"]`);if(ge){ge.style.left=t.x+"%";ge.style.top=t.y+"%";}});
+        return;
+      }
+      const tk=toks.find(t=>t.id===drag.id);
+      let x=(e.clientX-r.left)/r.width*100, y=(e.clientY-r.top)/r.height*100;
+      // жабышуу: башка сөздөрдүн x/y сына тартылат
+      let snapX=null,snapY=null;
+      if(snapOn){
+        for(const o of toks){if(o.id===tk.id)continue;
+          if(Math.abs(o.x-x)<1.6){x=o.x;snapX=o.x;}
+          if(Math.abs(o.y-y)<1.4){y=o.y;snapY=o.y;}
+        }
+        // торго жабышуу
+        x=Math.round(x/5)*5;y=Math.round(y/2.941)*2.941;
+      }
+      tk.x=Math.min(98,Math.max(2,x));tk.y=Math.min(98,Math.max(2,y));
+      el.style.left=tk.x+"%";el.style.top=tk.y+"%";
+      // жол көрсөткүч сызыктар
+      if(gv){if(snapX!=null){gv.style.left=snapX+"%";gv.style.display="block";}else gv.style.display="none";}
+      if(gh){if(snapY!=null){gh.style.top=snapY+"%";gh.style.display="block";}else gh.style.display="none";}
+      const pi=qs("#posInfo");if(pi)pi.textContent=`x:${tk.x.toFixed(1)} y:${tk.y.toFixed(1)}`;
+    };
+    el.onpointerup=()=>{if(drag?.moved)scheduleSave();drag=null;if(gv)gv.style.display="none";if(gh)gh.style.display="none";};
+    el.ondblclick=()=>openTokenModal(el.dataset.id);
+  });
+}
+
+function toolsHTML(){
+  const L=data.lessons[view.lid];const tk=(L.tokens||[]).find(t=>t.id===sel);
+  const mm=multi.length>=2;
+  return`<div class="tools"><div class="trow"><button class="btn sm" id="bulkT">Текст</button><button class="btn sm ${gridOn?"":"g"}" id="gridT"></button><button class="btn sm ${snapOn?"":"g"}" id="snapT"></button><button class="btn sm ${L.lock?"r":"g"}" id="lockT">${L.lock?"":""}</button><select id="fontS">${FONTS.map(([v,n])=>`<option value="${v}" ${tk&&(tk.font||FONTS[0][0])===v?"selected":""}>${n}</option>`).join("")}</select><button class="btn sm g" id="szM">−</button><input type="number" id="sizeN" min="8" max="160" value="${tk?.size||34}" style="width:56px;padding:6px 4px;text-align:center;"/><button class="btn sm g" id="szP">+</button><button class="btn sm ${tk?.b?"":"g"}" id="boldT" style="font-weight:800;">Ж</button><span class="grow"></span><button class="btn sm g" id="undoB">↩</button><button class="btn sm g" id="redoB">↪</button><button class="btn sm g" id="helpT"></button></div><div class="trow" id="selTools" style="${(tk||mm)?"":"display:none;"}">
+      ${mm?`<span class="muted" style="flex:none;font-size:0.7rem;">${multi.length} тандалды:</span><button class="btn sm g" id="alY">— катар</button><button class="btn sm g" id="alX">| мамыча</button><button class="btn sm g" id="alSpread">↔ бирдей</button><span class="sl">Катар↕<button class="btn sm g" id="rgN">−</button><button class="btn sm g" id="rgP">+</button></span><span class="sl">Сөз↔<button class="btn sm g" id="cgN">−</button><button class="btn sm g" id="cgP">+</button></span><button class="btn sm g" id="clrMulti">тандоо</button>`:""}
+      <span class="sl">↕<button class="btn sm g" id="ny">−</button><button class="btn sm g" id="py">+</button></span><span class="sl">↔<button class="btn sm g" id="nx">−</button><button class="btn sm g" id="px">+</button></span><span class="sl">Аралык<button class="btn sm g" id="spM">−</button><button class="btn sm g" id="spP">+</button></span><button class="btn sm g" id="offT">${tk?.off?"Сабакка":"Сабактан"}</button><button class="btn sm g" id="mediaB"></button><button class="btn sm r" id="delT">✕</button><span class="sl" id="posInfo" style="display:none;"></span><input type="hidden" id="sizeS" value="${tk?.size||34}"/><input type="hidden" id="spS" value="${tk?.sp||0}"/></div></div>`;
+}
+function renderToolsState(){
+  const L=data.lessons[view.lid];const tk=(L.tokens||[]).find(t=>t.id===sel);
+  const st=qs("#selTools");if(st){st.style.display=(tk||multi.length>=2)?"flex":"none";if(tk){qs("#fontS").value=tk.font||FONTS[0][0];const sn=qs("#sizeN");if(sn)sn.value=tk.size||34;const ob=qs("#offT");if(ob)ob.textContent=tk.off?"Сабакка":"Сабактан";const bb=qs("#boldT");if(bb)bb.classList.toggle("g",!tk.b);}}
+  const ar=qs("#alignRow");if(ar)ar.style.display=multi.length>=2?"flex":"none";
+}
+function nudge(dx,dy){
+  const L=data.lessons[view.lid];const ids=multi.length?multi:(sel?[sel]:[]);
+  if(!ids.length)return;snapshot();
+  ids.forEach(id=>{const t=L.tokens.find(x=>x.id===id);if(t){t.x=Math.min(98,Math.max(2,t.x+dx));t.y=Math.min(98,Math.max(2,t.y+dy));}});
+  scheduleSave();render();
+}
+function bindTools(){
+  const L=data.lessons[view.lid];
+  qs("#bulkT").onclick=()=>{
+    openModal(`<h3>Толук текст менен жазуу</h3><p class="muted mt">Сабактын толук текстин коюңуз (Ctrl+V). Ар бир сап — китептеги бир катар. Сөздөр оңдон солго өзү тизилет, кийин каалагандай жылдырасыз.</p><textarea id="bkTxt" rows="6" dir="rtl" style="font-family:'Scheherazade New';font-size:1.5rem;line-height:2;" placeholder="بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ&#10;الم&#10;..."></textarea><div class="row mt"><span class="muted">Бөлүү:</span><select id="bkMode" style="max-width:150px;"><option value="word">Сөз-сөз</option><option value="char">Тамга-тамга</option></select><span class="muted">Шрифт:</span><select id="bkFont" style="max-width:160px;">${FONTS.map(([v,n])=>`<option value="${v}">${n}</option>`).join("")}</select><label class="row" style="gap:4px;cursor:pointer;"><input type="checkbox" id="bkB" style="width:auto;"/><b>Ж</b></label><span class="muted">Өлчөм:</span><input id="bkSz" type="number" min="8" max="160" value="${+(qs("#sizeN")?.value)||34}" style="max-width:75px;"/><span class="muted">Катар аралыгы:</span><input id="bkGap" type="number" min="4" max="20" value="9" style="max-width:70px;"/></div><label class="row mt" style="gap:6px;cursor:pointer;"><input type="checkbox" id="bkClr" style="width:auto;"/><span style="font-size:0.85rem;">Адегенде барактагынын баарын өчүрүү</span></label><button class="btn mt" style="width:100%;" id="bkOk">Баракка тизүү</button>`);
+    qs("#bkOk").onclick=()=>{
+      const t=qs("#bkTxt").value;if(!t.trim())return;
+      const added=layoutBulk(L,t,qs("#bkMode").value,Math.min(160,Math.max(8,+qs("#bkSz").value||34)),Math.min(20,Math.max(4,+qs("#bkGap").value||9)),qs("#bkClr").checked,qs("#bkFont").value,qs("#bkB").checked);
+      closeModal();sel=null;multi=[];render();
+      if(!added)alert("Текст табылган жок");
+    };
+  };
+  qs("#gridT").onclick=()=>{gridOn=!gridOn;localStorage.setItem("plat_grid",gridOn?"1":"0");render();};
+  qs("#snapT").onclick=()=>{snapOn=!snapOn;localStorage.setItem("plat_snap",snapOn?"1":"0");render();};
+  qs("#lockT").onclick=()=>{L.lock=!L.lock;scheduleSave();render();};
+  qs("#undoB").onclick=undo;qs("#redoB").onclick=redo;
+  const targets=()=>{const ids=multi.length?multi:(sel?[sel]:[]);return ids.map(id=>L.tokens.find(t=>t.id===id)).filter(Boolean);};
+  qs("#fontS").onchange=e=>{const ts=targets();if(!ts.length)return;snapshot();ts.forEach(t=>t.font=e.target.value);scheduleSave();render();};
+  const applySize=v=>{const ts=targets();if(!ts.length)return;ts.forEach(t=>{t.size=v;const el=qs(`.tok[data-id="${t.id}"]`);if(el)el.style.fontSize=v+"px";});const n=qs("#sizeN");if(n)n.value=v;const r2=qs("#sizeS");if(r2)r2.value=Math.min(90,Math.max(16,v));};
+  qs("#helpT").onclick=()=>{openModal(`<h3>Кыскача жардам</h3><p class="muted mt" style="line-height:1.8;">Текст — сабактын толук текстин коюңуз, баракка өзү сап-сап тизилет.<br/>Барактын бош жерин <b>эки жолу басуу</b> — ошол жерге жазуу.<br/>Тамганы <b>эки жолу басуу</b> — текстин өзгөртүү, үн/видео/жардам кошуу.<br/>Бош жерден <b>сүйрөө</b> — рамка менен көп тандоо; чогуу жылдыруу, өлчөм, өчүрүү.<br/>— түз катарга жабышуу · — тор · — бетти катыруу (жылбай калат).<br/>Ж — жоон шрифт · Сабактан — тамга көрүнөт, бирок окууга/тестке кирбейт.<br/>← → (жогоруда) — мурунку/кийинки сабак.</p><button class="btn g mt" style="width:100%;" id="hc">Жабуу</button>`);qs("#hc").onclick=closeModal;};
+  qs("#szM").onclick=()=>{const c=+(qs("#sizeN")?.value)||34;snapshot();applySize(Math.max(8,c-2));scheduleSave();};
+  qs("#szP").onclick=()=>{const c=+(qs("#sizeN")?.value)||34;snapshot();applySize(Math.min(160,c+2));scheduleSave();};
+  const applySp=d=>{const ts=targets();if(!ts.length)return;snapshot();ts.forEach(t=>{t.sp=Math.max(0,Math.min(30,(+t.sp||0)+d));const el2=qs(`.tok[data-id="${t.id}"]`);if(el2)el2.style.letterSpacing=t.sp+"px";});scheduleSave();};
+  qs("#spM").onclick=()=>applySp(-1);
+  qs("#spP").onclick=()=>applySp(1);
+  qs("#sizeN").onchange=e=>{const v=Math.min(160,Math.max(8,+e.target.value||34));snapshot();applySize(v);scheduleSave();};
+  qs("#offT").onclick=()=>{const ts=targets();if(!ts.length)return;snapshot();const to=!ts[0].off;ts.forEach(t=>{if(to)t.off=true;else delete t.off;});scheduleSave();render();};
+  const scaleSel=(axis,k)=>{const ts=targets();if(ts.length<2)return;snapshot();
+    if(axis==="y"){const m=Math.min(...ts.map(t=>+t.y));ts.forEach(t=>{t.y=Math.min(97,Math.max(2,+(m+(t.y-m)*k).toFixed(1)));});}
+    else{const c=ts.reduce((a,t)=>a+ +t.x,0)/ts.length;ts.forEach(t=>{t.x=Math.min(98,Math.max(2,+(c+(t.x-c)*k).toFixed(1)));});}
+    scheduleSave();ts.forEach(t=>{const el2=qs(`.tok[data-id="${t.id}"]`);if(el2){el2.style.left=t.x+"%";el2.style.top=t.y+"%";}});};
+  qs("#rgN")?.addEventListener("click",()=>scaleSel("y",0.9));
+  qs("#rgP")?.addEventListener("click",()=>scaleSel("y",1.11));
+  qs("#cgN")?.addEventListener("click",()=>scaleSel("x",0.9));
+  qs("#cgP")?.addEventListener("click",()=>scaleSel("x",1.11));
+  qs("#boldT").onclick=()=>{const ts=targets();if(!ts.length)return;snapshot();const to=!ts[0].b;ts.forEach(t=>{if(to)t.b=1;else delete t.b;});scheduleSave();render();};
+
+  qs("#ny").onclick=()=>nudge(0,-0.6);qs("#py").onclick=()=>nudge(0,0.6);
+  qs("#nx").onclick=()=>nudge(-0.6,0);qs("#px").onclick=()=>nudge(0.6,0);
+  qs("#delT").onclick=()=>{const ts=targets();if(!ts.length)return;if(ts.length>1&&!confirm(`${ts.length} элементти өчүрөсүзбү?`))return;snapshot();const ids=new Set(ts.map(t=>t.id));L.tokens=L.tokens.filter(t=>!ids.has(t.id));sel=null;multi=[];scheduleSave();render();};
+  qs("#mediaB").onclick=()=>{if(sel)openTokenModal(sel);};
+  // түздөө (көп тандоо)
+  qs("#alY")?.addEventListener("click",()=>{const ts=multi.map(id=>L.tokens.find(t=>t.id===id)).filter(Boolean);if(ts.length<2)return;snapshot();const y=ts.reduce((a,t)=>a+t.y,0)/ts.length;ts.forEach(t=>t.y=y);scheduleSave();render();});
+  qs("#alX")?.addEventListener("click",()=>{const ts=multi.map(id=>L.tokens.find(t=>t.id===id)).filter(Boolean);if(ts.length<2)return;snapshot();const x=ts.reduce((a,t)=>a+t.x,0)/ts.length;ts.forEach(t=>t.x=x);scheduleSave();render();});
+  qs("#alSpread")?.addEventListener("click",()=>{const ts=multi.map(id=>L.tokens.find(t=>t.id===id)).filter(Boolean);if(ts.length<3)return;snapshot();const sorted=[...ts].sort((a,b)=>b.x-a.x);const x0=sorted[0].x,x1=sorted[sorted.length-1].x;const step=(x1-x0)/(sorted.length-1);sorted.forEach((t,i)=>t.x=x0+step*i);scheduleSave();render();});
+  qs("#clrMulti")?.addEventListener("click",()=>{multi=[];render();});
+}
+
+function useHint(tk){const L=data.lessons[view.lid],s=lset(L);const used=statsCache?.hints||0;if(used>=s.hints){const o=qs("#hintOut");if(o)o.innerHTML=`<span style="color:var(--red);font-size:0.8rem;">Жардам лимити бүттү</span>`;return;}bump(view.lid,{hints:used+1});const o=qs("#hintOut");if(o)o.innerHTML=`<b style="font-size:1.1rem;">${esc(tk.tr||"—")}</b>`;const hl=qs("#hintsLeft");if(hl)hl.textContent=Math.max(0,s.hints-(used+1));}
+
+
+/* ҮЙ ОКУУСУ — жетектелген окуу: белгиленген сөздү үн чыгарып айтканда гана кийинкиге өтөт,
+   баары диктофонго жазылып Устазга жөнөтүлөт */
+function updLimitInfo(st,s){
+  const hl=qs("#hintsLeft");if(hl)hl.textContent=Math.max(0,s.hints-(st?.hints||0));
+}
+function fillProg(st,s){
+  const p=qs("#progCard");if(!p)return;
+  const reads=st?.reads||0;
+  const ps=passScore(st,s);
+  p.innerHTML=`
+  <span class="chip">Үй окуусу · 30% <b>${reads}/${s.home} · ${ps.home}%</b></span><span class="chip">Таануу · 30% <b>${ps.rec}%</b></span><span class="chip">Айтуу · 40% <b>${ps.g!=null?ps.g+"%":"Устаз коё элек"}</b></span><span class="chip tot">Жалпы жыйынтык <b>${ps.fin!=null?ps.fin+"%":"—"} / ${s.pass}%</b></span>
+  ${ps.mark!=null?`<span class="chip">Баа <b>${ps.mark}</b></span>`:""}
+  <span class="chip">${ps.passed?"Өттүңүз":"Кийинкиси жабык"}</span>`;
+}
+async function startHomeRead(){
+  const L=data.lessons[view.lid],s=lset(L);
+  const seq=readOrder((L.tokens||[]).filter(t=>t.ar&&!t.off));
+  if(!seq.length){alert("Сабакта окуй турган элементтер жок");return;}
+  let stream;
+  stream=await micStream();
+  if(!stream)return;
+  const ctx=new (window.AudioContext||window.webkitAudioContext)();
+  if(ctx.state==="suspended"){try{await ctx.resume();}catch(e){}}
+  const srcN=ctx.createMediaStreamSource(stream);
+  const an=ctx.createAnalyser();an.fftSize=512;srcN.connect(an);
+  const buf=new Uint8Array(an.frequencyBinCount);
+  let rec=null,chunks=[];
+  if(window.MediaRecorder){try{const _m=recMime();rec=new MediaRecorder(stream,_m?{mimeType:_m}:undefined);rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data);};rec.start(500);}catch(e){rec=null;}}
+  document.body.classList.add("reading");
+  homeRead={stream,ctx,an,buf,seq,i:0,passes:0,words:0,limit:s.home,talking:false,voiceMs:0,lastVoice:0,lastTick:Date.now(),silSince:Date.now(),rec,chunks,t0:Date.now(),raf:null,done:false,playing:false,nf:10};
+  const b=qs("#homeB");if(b)b.textContent="Окууну бүтүрүү";
+  const rc=qs("#readCnt");if(rc)rc.style.display="block";
+  markCur();updateReadUI();
+  playCur();
+  tickRead();
+}
+/* Устаздын үнү учурдагы тамганы окуйт — окуучу кайталашы керек */
+function playCur(){
+  if(!homeRead||homeRead.done)return;
+  const tk=homeRead.seq[homeRead.i];if(!tk)return;
+  homeRead.playing=true;
+  playTok(tk,()=>{setTimeout(()=>{if(homeRead&&!homeRead.done){homeRead.playing=false;homeRead.talking=false;homeRead.voiceMs=0;homeRead.silSince=Date.now();homeRead.lastTick=Date.now();}},300);});
+}
+function markCur(){
+  document.querySelectorAll(".tok.cur").forEach(el=>el.classList.remove("cur"));
+  const tk=homeRead?.seq[homeRead.i];
+  if(tk){const el=qs(`.tok[data-id="${tk.id}"]`);if(el){el.classList.add("cur");el.scrollIntoView({block:"nearest",behavior:"smooth"});}}
+}
+function updateReadUI(){
+  const rc=qs("#readCnt");if(!rc||!homeRead)return;
+  rc.innerHTML=`<span class="rec-dot"></span> Жазылып жатат · Окуу: <b>${Math.min(homeRead.passes+1,homeRead.limit)}/${homeRead.limit}</b> · Тамга: <b>${homeRead.i+1}/${homeRead.seq.length}</b><br/><span class="muted">${esc(T("readHint"))}</span>`;
+}
+function tickRead(){
+  if(!homeRead||homeRead.done)return;
+  if(homeRead.playing){ // Устаздын үнү ойноп жатканда микрофонду укпайбыз
+    homeRead.lastTick=Date.now();
+    homeRead.raf=requestAnimationFrame(tickRead);return;
+  }
+  homeRead.an.getByteFrequencyData(homeRead.buf);
+  let sum=0;for(let i=2;i<homeRead.buf.length;i++)sum+=homeRead.buf[i];
+  const lvl=sum/homeRead.buf.length;
+  const now=Date.now();const dt=now-homeRead.lastTick;homeRead.lastTick=now;
+  const w=qs("#vWarn");
+  // адаптивдүү босого: тынч учурдагы ызы-чууга жараша өзү тууралайт — акырын айтса да угат
+  const th=Math.max(11,homeRead.nf+8);
+  if(lvl<th)homeRead.nf=homeRead.nf*0.94+lvl*0.06;
+  if(lvl>th){
+    homeRead.voiceMs+=dt;homeRead.lastVoice=now;homeRead.silSince=now;
+    if(homeRead.voiceMs>240)homeRead.talking=true;
+    if(w)w.style.display="none";
+  }else{
+    if(homeRead.talking&&now-homeRead.lastVoice>620){
+      homeRead.talking=false;homeRead.voiceMs=0;
+      advanceRead();
+    }else if(!homeRead.talking){
+      homeRead.voiceMs=Math.max(0,homeRead.voiceMs-dt);
+      if(now-homeRead.silSince>5000){ // үн чыккан жок — эскертүү + Устаздын үнү кайра окуйт
+        if(w)w.style.display="block";
+        homeRead.silSince=Date.now();
+        playCur();
+      }
+    }
+  }
+  if(homeRead)homeRead.raf=requestAnimationFrame(tickRead);
+}
+function advanceRead(){
+  if(!homeRead)return;
+  homeRead.words++;homeRead.i++;
+  if(homeRead.i>=homeRead.seq.length){
+    homeRead.passes++;homeRead.i=0;
+    bump(view.lid,{reads:(statsCache?.reads||0)+1});
+    if(homeRead.passes>=homeRead.limit){
+      homeRead.done=true;
+      const rc=qs("#readCnt");if(rc)rc.innerHTML=`Азаматсыз! Үй окуусу толук аткарылды (${homeRead.passes}/${homeRead.limit}).`;
+      stopHomeRead(false,true);return;
+    }
+  }
+  markCur();updateReadUI();
+  playCur();
+}
+function stopHomeRead(rerender,finished){
+  if(!homeRead)return;
+  const hr=homeRead;homeRead=null;hr.done=true;
+  document.body.classList.remove("reading");
+  cancelAnimationFrame(hr.raf);
+  const w=qs("#vWarn");if(w)w.style.display="none";
+  document.querySelectorAll(".tok.cur").forEach(el=>el.classList.remove("cur"));
+  if(hr.words)bump(view.lid,{words:(statsCache?.words||0)+hr.words});
+  const finish=()=>{
+    hr.stream.getTracks().forEach(t=>t.stop());hr.ctx.close().catch(()=>{});
+    const b=qs("#homeB");if(b)b.textContent="Үй окуусу";
+    const rc=qs("#readCnt");
+    if(!finished&&rc)rc.innerHTML=`Токтотулду · толук окуу: ${hr.passes}/${hr.limit}`;
+    if(hr.chunks.length&&student){
+      const mt=hr.rec?.mimeType||recMime()||"audio/webm";
+      const blob=new Blob(hr.chunks,{type:mt});
+      if(blob.size>30*1048576){if(rc)rc.innerHTML+="<br/>Жазуу өтө чоң — жөнөтүлгөн жок";return;}
+      if(rc)rc.innerHTML+="<br/>Үн жазууңуз Устазга жөнөтүлүүдө…";
+      const id=uid();const path=`recordings/${view.lid}/${skey(student)}/${id}.${recExt(mt)}`;
+      const task=uploadBytesResumable(sref(storage,path),blob,{contentType:mt});
+      task.on("state_changed",null,
+        ()=>{const r2=qs("#readCnt");if(r2)r2.innerHTML+="<br/>Жазуу жөнөтүлгөн жок — интернетти текшериңиз";},
+        async()=>{
+          const url=await getDownloadURL(task.snapshot.ref);
+          set(ref(db,`${ROOT}/recs/${view.lid}/${skey(student)}/${id}`),{url,ts:Date.now(),dur:Math.round((Date.now()-hr.t0)/1000),reads:hr.passes,words:hr.words,name:student}).catch(()=>{});
+          const r2=qs("#readCnt");if(r2)r2.innerHTML=(finished?`Азаматсыз! Үй окуусу толук аткарылды (${hr.passes}/${hr.limit}).`:`Токтотулду · толук окуу: ${hr.passes}/${hr.limit}`)+"<br/>Үн жазууңуз Устазга жетти — ал угуп, баа коёт";
+          const LL=data.lessons[view.lid];if(LL)loadStats(view.lid).then(st=>fillProg(st,lset(LL)));
+        });
+    }
+  };
+  if(hr.rec&&hr.rec.state!=="inactive"){hr.rec.onstop=finish;hr.rec.stop();}
+  else finish();
+}
+
+
+/* ТЕСТ */
+let test=null;
+function shuffle(a){const r=[...a];for(let i=r.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[r[i],r[j]]=[r[j],r[i]];}return r;}
+/* Таануу тести: угуп, туура жазылганын табуу (үнсүз) */
+function renderTest(){
+  const L=data.lessons[view.lid],s=lset(L);
+  const pool=(L.tokens||[]).filter(t=>t.ar&&!t.off);
+  if(pool.length<2){app.innerHTML=`<p class="center muted mt">Тест үчүн элементтер жетишсиз</p><p class="center mt"><button class="btn g" id="tb">← Артка</button></p>`;qs("#tb").onclick=()=>{view={page:"lesson",lid:view.lid};render();};return;}
+  if(!test){
+    const extra=Object.values(data.lessons).flatMap(l=>l.tokens||[]).filter(t=>!pool.includes(t));
+    const qn=Math.min(Math.max(3,+s.testQ||10),30);
+    let qi=shuffle(pool).slice(0,qn);
+    while(qi.length<qn)qi.push(pool[Math.floor(Math.random()*pool.length)]);
+    test={qs:shuffle(qi).map(item=>{const wrong=shuffle([...pool.filter(x=>x!==item&&x.ar!==item.ar),...shuffle(extra).slice(0,4)]).slice(0,3);return{item,opts:shuffle([item,...wrong])};}),i:0,ok:0,lock:false};
+  }
+  const q=test.qs[test.i];
+  if(!q){
+    const pct=Math.round(test.ok/test.qs.length*100);
+    const passed=pct>=s.pass; // бул таануунун гана жыйынтыгы; сабактан өтүү = Айтуу баасы менен орточосу
+    loadStats(view.lid).then(st=>{bump(view.lid,{tests:(st?.tests||0)+1,best:Math.max(st?.best||0,pct)});});
+    app.innerHTML=`<div class="card center mt"><p style="font-size:1.4rem;"><b>${pct}%</b></p>${passed?`<p style="color:var(--em-d);font-size:1.1rem;margin-top:6px;">Таануу жакшы!</p>`:`<p style="color:var(--red);margin-top:6px;">Таануу төмөн — кайталаңыз.</p>`}<p class="muted mt">Сабактан өтүү: Таануу% + Айтуу%(Устаздын баасы) орточосу ${s.pass}% дан ашышы керек.</p><div class="row mt" style="justify-content:center;"><button class="btn" id="again">Кайра</button><button class="btn g" id="bk">Сабакка</button></div></div>`;
+    qs("#again").onclick=()=>{test=null;render();};
+    qs("#bk").onclick=()=>{test=null;view={page:"lesson",lid:view.lid};render();};
+    return;
+  }
+  app.innerHTML=`<div class="row mt"><button class="btn sm g" id="tb">← Чыгуу</button><span class="grow center muted">Суроо ${test.i+1}/${test.qs.length} · туура: ${test.ok}</span></div><div class="card center"><p class="muted" style="margin-bottom:8px;">Угуп, туура жазылганын табыңыз</p><button class="btn" id="hear">Кайра угуу</button><div class="mt">${q.opts.map((o,i)=>`<button class="opt" data-i="${i}" style="font-family:${o.font||FONTS[0][0]};">${esc(o.ar)}</button>`).join("")}</div></div>`;
+  qs("#tb").onclick=()=>{test=null;view={page:"lesson",lid:view.lid};render();};
+  qs("#hear").onclick=()=>playTok(q.item);
+  playTok(q.item);
+  app.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+    if(test.lock)return;test.lock=true;
+    const ok=q.opts[+b.dataset.i]===q.item;
+    if(ok){test.ok++;b.classList.add("ok");}
+    else{b.classList.add("no");app.querySelectorAll(".opt").forEach(x=>{if(q.opts[+x.dataset.i]===q.item)x.classList.add("ok");});}
+    setTimeout(()=>{test.i++;test.lock=false;render();},1200);
+  });
+}
+/* Айтуу тести: сайт тамганы көрсөтөт, 4 секунд — окуучу үн чыгарып окуйт,
+   баары диктофонго жазылып Устазга барат, баасын Устаз коёт */
+let vtest=null;
+function renderVTest(){
+  const L=data.lessons[view.lid],s=lset(L);
+  const pool=(L.tokens||[]).filter(t=>t.ar&&!t.off);
+  if(!pool.length){app.innerHTML=`<p class="center muted mt">Тест үчүн элементтер жетишсиз</p><p class="center mt"><button class="btn g" id="tb">← Артка</button></p>`;qs("#tb").onclick=()=>{view={page:"lesson",lid:view.lid};render();};return;}
+  const qn=Math.min(Math.max(3,+s.testQ||10),30);
+  let qi=shuffle(pool).slice(0,qn);
+  while(qi.length<qn)qi.push(pool[Math.floor(Math.random()*pool.length)]);
+  app.innerHTML=`<div class="row mt"><button class="btn sm g" id="vb">← Чыгуу</button><span class="grow center muted" id="vNum">Даярдык…</span></div><div class="card center"><p class="muted">Көрсөтүлгөн тамганы <b>үн чыгарып окуңуз</b> — ар бирине ${+s.say||7} секунд</p><div class="ar-in" id="vAr" style="font-size:4.5rem;line-height:1.5;min-height:120px;"></div><p style="font-size:1.9rem;font-weight:700;color:var(--em-d);margin-top:2px;" id="vCnt"></p><p class="muted" id="vSt">${student?`<span class="rec-dot"></span> Диктофон жазып жатат — Устаз угуп, баа коёт`:"Сынап көрүү режими (ат жазылган эмес — жазуу жөнөтүлбөйт)"}</p></div>`;
+  const SAY=Math.max(3,+s.say||7);
+  vtest={qi,i:-1,left:SAY,say:SAY,qlog:[],t0:Date.now(),int:null,rec:null,chunks:[],stream:null,done:false};
+  qs("#vb").onclick=()=>{stopVTest();view={page:"lesson",lid:view.lid};render();};
+  const nextItem=()=>{
+    if(!vtest)return;
+    vtest.i++;
+    if(vtest.i>=vtest.qi.length){finishVTest();return;}
+    vtest.left=vtest.say;
+    const tk=vtest.qi[vtest.i];
+    vtest.qlog.push({ar:tk.ar,t:Math.round((Date.now()-vtest.t0)/1000)});
+    const a=qs("#vAr");if(a){a.textContent=tk.ar;a.style.fontFamily=tk.font||FONTS[0][0];}
+    const c=qs("#vCnt");if(c)c.textContent=vtest.say;
+    const n=qs("#vNum");if(n)n.textContent=`${vtest.i+1}/${vtest.qi.length}`;
+  };
+  const begin=()=>{
+    if(!vtest)return;
+    vtest.t0=Date.now();
+    nextItem();
+    vtest.int=setInterval(()=>{
+      if(!vtest||vtest.done)return;
+      vtest.left--;
+      const c=qs("#vCnt");if(c)c.textContent=Math.max(0,vtest.left);
+      if(vtest.left<=0)nextItem();
+    },1000);
+  };
+  if(student&&navigator.mediaDevices&&window.MediaRecorder){
+    micStream().then(stream=>{
+      if(!stream){if(vtest){vtest=null;}view={page:"lesson",lid:view.lid};render();return;}
+      if(!vtest){stream.getTracks().forEach(t=>t.stop());return;}
+      vtest.stream=stream;
+      try{const _ch=vtest.chunks;const _m=recMime();vtest.rec=new MediaRecorder(stream,_m?{mimeType:_m}:undefined);vtest.rec.ondataavailable=e=>{if(e.data.size)_ch.push(e.data);};vtest.rec.start(500);}catch(e){}
+      begin();
+    }).catch(()=>{view={page:"lesson",lid:view.lid};render();});
+  }else begin();
+}
+function stopVTest(){
+  if(!vtest)return;
+  clearInterval(vtest.int);
+  try{if(vtest.rec&&vtest.rec.state!=="inactive")vtest.rec.stop();}catch(e){}
+  vtest.stream?.getTracks().forEach(t=>t.stop());
+  vtest=null;
+}
+function finishVTest(){
+  if(!vtest)return;
+  vtest.done=true;clearInterval(vtest.int);
+  const vt=vtest;vtest=null;
+  bump(view.lid,{vtests:(statsCache?.vtests||0)+1});
+  app.innerHTML=`<div class="card center mt"><p style="font-size:1.3rem;"><b>Айтуу тести аткарылды!</b></p><p class="muted mt" id="vUp">${student?"Жазуу Устазга жөнөтүлүүдө…":"Сынап көрүү режими — жазуу жөнөтүлбөйт"}</p><p class="muted mt">Устаз угуп, баа койгондон кийин бааңыз сабак бетинде көрүнөт.</p><div class="row mt" style="justify-content:center;"><button class="btn g" id="bk">Сабакка кайтуу</button></div></div>`;
+  qs("#bk").onclick=()=>{view={page:"lesson",lid:view.lid};render();};
+  const lid=view.lid;
+  const done=()=>{
+    vt.stream?.getTracks().forEach(t=>t.stop());
+    if(!student)return;
+    const meta={ts:Date.now(),dur:Math.round((Date.now()-vt.t0)/1000),type:"voice",qlog:vt.qlog,name:student};
+    const id=uid();
+    if(!vt.chunks.length){meta.noaudio=true;set(ref(db,`${ROOT}/recs/${lid}/${skey(student)}/${id}`),meta).catch(()=>{});const u=qs("#vUp");if(u)u.textContent="Аудио жазылган жок — микрофонду текшерип, кайра тапшырыңыз";return;}
+    const mt=vt.rec?.mimeType||recMime()||"audio/webm";
+    const blob=new Blob(vt.chunks,{type:mt});
+    if(blob.size>30*1048576){meta.noaudio=true;set(ref(db,`${ROOT}/recs/${lid}/${skey(student)}/${id}`),meta).catch(()=>{});const u=qs("#vUp");if(u)u.textContent="Жазуу өтө чоң — жөнөтүлгөн жок";return;}
+    const task=uploadBytesResumable(sref(storage,`recordings/${lid}/${skey(student)}/${id}.${recExt(mt)}`),blob,{contentType:mt});
+    task.on("state_changed",null,
+      ()=>{meta.noaudio=true;set(ref(db,`${ROOT}/recs/${lid}/${skey(student)}/${id}`),meta).catch(()=>{});const u=qs("#vUp");if(u)u.textContent="Аудио жөнөтүлгөн жок — интернетти текшерип, кайра тапшырыңыз";},
+      async()=>{
+        try{
+          meta.url=await getDownloadURL(task.snapshot.ref);
+          await set(ref(db,`${ROOT}/recs/${lid}/${skey(student)}/${id}`),meta);
+          const u=qs("#vUp");if(u)u.textContent="Жазуу Устазга жетти";
+        }catch(e){meta.noaudio=true;set(ref(db,`${ROOT}/recs/${lid}/${skey(student)}/${id}`),meta).catch(()=>{});const u=qs("#vUp");if(u)u.textContent="Аудио жөнөтүлгөн жок";}
+      });
+  };
+  if(vt.rec&&vt.rec.state!=="inactive"){vt.rec.onstop=done;vt.rec.stop();}else done();
+}
+
+/* үн/видео/транскрипция */
+let recorder=null,recChunks=[];
+function openTokenModal(id){const L=data.lessons[view.lid];const tk=L.tokens.find(t=>t.id===id);if(!tk)return;openModal(`<p class="muted">Текстти өзгөртүү:</p><input id="tkAr" dir="rtl" class="ar-in" style="font-size:1.8rem;text-align:center;" value="${esc(tk.ar)}"/><div class="row mt"><button class="btn grow" id="recB">Диктофонго жазуу</button>${tk.audio?`<button class="btn g" id="playB">▶</button><button class="btn r sm" id="clrA">✕</button>`:""}</div><p class="muted mt">же MP3 шилтеме:</p><input id="aUrl" value="${tk.audio&&tk.audio.startsWith("http")?esc(tk.audio):""}" placeholder="https://...mp3"/><p class="muted mt">Видео:</p><input id="vUrl" value="${esc(tk.video||"")}" placeholder="https://..."/><p class="muted mt">Транскрипция:</p><input id="trIn" value="${esc(tk.tr||"")}" placeholder="мис. ба"/><div class="row mt"><button class="btn grow" id="tkOk">Сактоо</button><button class="btn g" id="tkC">Жабуу</button></div>`);qs("#tkC").onclick=()=>{stopRec();closeModal();};qs("#playB")?.addEventListener("click",()=>new Audio(tk.audio).play().catch(()=>{}));qs("#clrA")?.addEventListener("click",()=>{snapshot();delete tk.audio;scheduleSave();closeModal();render();});qs("#recB").onclick=async()=>{const b=qs("#recB");if(recorder){stopRec();b.textContent="Даярдалууда…";return;}
+  const stream=await micStream(true);if(!stream)return;
+  try{
+    recChunks=[];const m=recMime();recorder=new MediaRecorder(stream,m?{mimeType:m}:undefined);
+    recorder.ondataavailable=e=>{if(e.data.size)recChunks.push(e.data);};
+    recorder.onstop=async()=>{
+      stream.getTracks().forEach(t=>t.stop());
+      const mt=recorder.mimeType||recMime()||"audio/webm";
+      recorder=null;
+      let blob=new Blob(recChunks,{type:mt}),ext=recExt(mt),ct=mt;
+      const w=await toWav(blob,15);
+      if(w){blob=w;ext="wav";ct="audio/wav";}
+      const bb=qs("#recB");if(bb)bb.textContent="Жүктөлүүдө…";
+      try{
+        const task=uploadBytesResumable(sref(storage,`tokens/${view.lid}/${tk.id}_${Date.now()}.${ext}`),blob,{contentType:ct});
+        await new Promise((res,rej)=>task.on("state_changed",null,rej,res));
+        const url=await getDownloadURL(task.snapshot.ref);
+        snapshot();tk.audio=url;scheduleSave();closeModal();render();toast("Үн сакталды — бардык телефондо угулат");
+      }catch(e){ // интернет жок болсо — эски ыкма менен телефондо сактайбыз
+        const r=new FileReader();r.onload=()=>{snapshot();tk.audio=r.result;scheduleSave();closeModal();render();};r.readAsDataURL(blob);
+      }
+    };
+    recorder.start();b.innerHTML=`<span class="rec-dot"></span> Жазылууда… (басып токтотуңуз)`;
+  }catch(e){stream.getTracks().forEach(t=>t.stop());toast("Жаздыруу башталган жок");}};qs("#tkOk").onclick=()=>{snapshot();const na=qs("#tkAr").value.trim();if(na)tk.ar=na;const a=qs("#aUrl").value.trim(),v=qs("#vUrl").value.trim(),tr=qs("#trIn").value.trim();if(a)tk.audio=a;tk.video=v||undefined;tk.tr=tr||undefined;scheduleSave();stopRec();closeModal();render();};}
+function stopRec(){if(recorder&&recorder.state!=="inactive")recorder.stop();}
+
+const _thMark=()=>document.querySelectorAll("[data-th]").forEach(x=>x.classList.toggle("on",x.dataset.th===document.body.dataset.theme));
+document.querySelectorAll("[data-th]").forEach(b=>b.onclick=()=>{document.body.dataset.theme=b.dataset.th;localStorage.setItem("plat_theme",b.dataset.th);_thMark();});
+const savedTh=localStorage.getItem("plat_theme");if(savedTh)document.body.dataset.theme=savedTh;_thMark();
+
+qs("#teacherBtn").onclick=teacherToggle;
+/* Жашыруун кирүү: брендди 2 секунд ичинде 5 жолу басуу же даректин аягына #ustaz жазуу */
+let _brT=[],_brand=document.querySelector(".brand");
+if(_brand)_brand.addEventListener("click",()=>{const n=Date.now();_brT=_brT.filter(t=>n-t<2000);_brT.push(n);if(_brT.length>=5){_brT=[];if(!teacher)teacherToggle();}});
+addEventListener("hashchange",()=>{if(location.hash==="#ustaz"&&!teacher){history.replaceState(null,"",location.pathname);teacherToggle();}});
+if(location.hash==="#ustaz"){history.replaceState(null,"",location.pathname);setTimeout(()=>{if(ready&&!teacher)teacherToggle();},1500);}
+(async()=>{
+  try{const s=await get(ref(db,ROOT+"/data"));if(s.exists()){data=s.val();if(!data.lessons)data.lessons={};}}catch(e){}
+  ready=true;
+  metric("visit");
+  onValue(ref(db,ROOT+"/data"),snap=>{if(!snap.exists()||teacher)return;data=snap.val();if(!data.lessons)data.lessons={};if(view.page==="home")render();});
+  render();
+})();
+</script>
+<script>
+if("serviceWorker" in navigator){addEventListener("load",()=>{navigator.serviceWorker.register("sw.js").catch(()=>{});});}
+</script>
+</body>
+</html>
